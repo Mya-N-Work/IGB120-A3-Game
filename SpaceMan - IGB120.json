@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 266,
+    "build": 261,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -81,6 +81,7 @@
     "authorUsernames": [],
     "categories": [],
     "playableDevices": [
+      "mobile",
       "mobile"
     ],
     "extensionProperties": [],
@@ -1385,18 +1386,12 @@
       "globalVariables": [],
       "sceneVariables": [],
       "eventsFunctions": [],
-      "eventsFunctionsFolderStructure": {
-        "folderName": "__ROOT"
-      },
       "eventsBasedBehaviors": [
         {
           "description": "Fire bullets with built-in cooldown, ammo, reloading, and overheating. Once added to your object that must shoot, use the behavior actions to fire another object as a bullet. These actions check all constraints internally (can be called without conditions, they will only fire when ready) and will make the bullet move (using a permanent force).",
           "fullName": "Fire bullets",
-          "helpPath": "",
-          "iconUrl": "",
           "name": "FireBullet",
           "objectType": "",
-          "previewIconUrl": "",
           "eventsFunctions": [
             {
               "fullName": "",
@@ -6081,265 +6076,6 @@
               "objectGroups": []
             }
           ],
-          "eventsFunctionsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "functionName": "onCreated"
-              },
-              {
-                "functionName": "doStepPreEvents"
-              },
-              {
-                "functionName": "FireTowardObject"
-              },
-              {
-                "functionName": "FireTowardPosition"
-              },
-              {
-                "functionName": "Fire"
-              },
-              {
-                "folderName": "Firing",
-                "children": [
-                  {
-                    "functionName": "FireSingleBullet"
-                  },
-                  {
-                    "functionName": "HasJustFired"
-                  },
-                  {
-                    "functionName": "BulletRotationEnabled"
-                  },
-                  {
-                    "functionName": "SetAngleVariance"
-                  },
-                  {
-                    "functionName": "SetBulletLayer"
-                  },
-                  {
-                    "functionName": "SetRotateBullet"
-                  },
-                  {
-                    "functionName": "Cooldown"
-                  },
-                  {
-                    "functionName": "SetCooldownOp"
-                  },
-                  {
-                    "functionName": "SetCooldown"
-                  },
-                  {
-                    "functionName": "CooldownTimeLeft"
-                  },
-                  {
-                    "functionName": "IsReadyToShoot"
-                  },
-                  {
-                    "functionName": "IsFiringCooldownActive"
-                  }
-                ]
-              },
-              {
-                "functionName": "ReloadAmmo"
-              },
-              {
-                "folderName": "Multi-Fire",
-                "children": [
-                  {
-                    "functionName": "FiringArc"
-                  },
-                  {
-                    "functionName": "SetFiringArcOp"
-                  },
-                  {
-                    "functionName": "SetFiringArc"
-                  },
-                  {
-                    "functionName": "SetBulletSpeedVariance"
-                  },
-                  {
-                    "functionName": "BulletQuantity"
-                  },
-                  {
-                    "functionName": "SetBulletQuantityOp"
-                  },
-                  {
-                    "functionName": "SetBulletQuantity"
-                  },
-                  {
-                    "functionName": "BulletLayer"
-                  }
-                ]
-              },
-              {
-                "folderName": "Firing variance",
-                "children": [
-                  {
-                    "functionName": "AngleVariance"
-                  },
-                  {
-                    "functionName": "SetAngleVarianceOp"
-                  },
-                  {
-                    "functionName": "BulletSpeedVariance"
-                  },
-                  {
-                    "functionName": "SetBulletSpeedVarianceOp"
-                  }
-                ]
-              },
-              {
-                "folderName": "Ammo",
-                "children": [
-                  {
-                    "functionName": "SetUnlimitedAmmo"
-                  },
-                  {
-                    "functionName": "AmmoQuantity"
-                  },
-                  {
-                    "functionName": "SetAmmoQuantityOp"
-                  },
-                  {
-                    "functionName": "SetAmmoQuantity"
-                  },
-                  {
-                    "functionName": "MaxAmmo"
-                  },
-                  {
-                    "functionName": "SetMaxAmmoOp"
-                  },
-                  {
-                    "functionName": "SetMaxAmmo"
-                  },
-                  {
-                    "functionName": "IsUnlimitedAmmo"
-                  },
-                  {
-                    "functionName": "IsOutOfAmmo"
-                  }
-                ]
-              },
-              {
-                "folderName": "Reload",
-                "children": [
-                  {
-                    "functionName": "ReloadDuration"
-                  },
-                  {
-                    "functionName": "SetReloadDurationOp"
-                  },
-                  {
-                    "functionName": "SetReloadDuration"
-                  },
-                  {
-                    "functionName": "ShotsPerReload"
-                  },
-                  {
-                    "functionName": "SetShotsPerReloadOp"
-                  },
-                  {
-                    "functionName": "SetShotsPerReload"
-                  },
-                  {
-                    "functionName": "SetAutomaticReload"
-                  },
-                  {
-                    "functionName": "ShotsBeforeNextReload"
-                  },
-                  {
-                    "functionName": "ReloadTimeLeft"
-                  },
-                  {
-                    "functionName": "IsReloadInProgress"
-                  },
-                  {
-                    "functionName": "IsAutomaticReloadingEnabled"
-                  },
-                  {
-                    "functionName": "IsReloadNeeded"
-                  }
-                ]
-              },
-              {
-                "folderName": "Overheat",
-                "children": [
-                  {
-                    "functionName": "OverheatDuration"
-                  },
-                  {
-                    "functionName": "SetOverheatDurationOp"
-                  },
-                  {
-                    "functionName": "SetOverheatDuration"
-                  },
-                  {
-                    "functionName": "HeatIncreasePerShot"
-                  },
-                  {
-                    "functionName": "SetHeatPerShotOp"
-                  },
-                  {
-                    "functionName": "SetHeatPerShot"
-                  },
-                  {
-                    "functionName": "LinearCoolingRate"
-                  },
-                  {
-                    "functionName": "SetLinearCoolingRateOp"
-                  },
-                  {
-                    "functionName": "SetLinearCoolingRate"
-                  },
-                  {
-                    "functionName": "ExponentialCoolingRate"
-                  },
-                  {
-                    "functionName": "SetExponentialCoolingRateOp"
-                  },
-                  {
-                    "functionName": "SetExponentialCoolingRate"
-                  },
-                  {
-                    "functionName": "HeatLevel"
-                  },
-                  {
-                    "functionName": "OverheatTimeLeft"
-                  },
-                  {
-                    "functionName": "IsOverheated"
-                  }
-                ]
-              },
-              {
-                "folderName": "Stats",
-                "children": [
-                  {
-                    "functionName": "ResetTotalShotsFired"
-                  },
-                  {
-                    "functionName": "ResetTotalBulletsCreated"
-                  },
-                  {
-                    "functionName": "ResetTotalReloadsCompleted"
-                  },
-                  {
-                    "functionName": "TotalShotsFired"
-                  },
-                  {
-                    "functionName": "TotalBulletsCreated"
-                  },
-                  {
-                    "functionName": "TotalReloadsCompleted"
-                  }
-                ]
-              },
-              {
-                "functionName": "IncreaseAmmo"
-              }
-            ]
-          },
           "propertyDescriptors": [
             {
               "value": "0.1",
@@ -6713,18 +6449,12 @@
       "globalVariables": [],
       "sceneVariables": [],
       "eventsFunctions": [],
-      "eventsFunctionsFolderStructure": {
-        "folderName": "__ROOT"
-      },
       "eventsBasedBehaviors": [
         {
           "description": "Teleport the object when leaving one side of the screen so that it immediately reappears on the opposite side, maintaining speed and trajectory.",
           "fullName": "Screen Wrap",
-          "helpPath": "",
-          "iconUrl": "",
           "name": "ScreenWrap",
           "objectType": "",
-          "previewIconUrl": "",
           "quickCustomizationVisibility": "hidden",
           "eventsFunctions": [
             {
@@ -7741,59 +7471,6 @@
               "objectGroups": []
             }
           ],
-          "eventsFunctionsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "functionName": "onCreated"
-              },
-              {
-                "functionName": "doStepPostEvents"
-              },
-              {
-                "functionName": "IsHorizontalWrapping"
-              },
-              {
-                "functionName": "IsVerticalWrapping"
-              },
-              {
-                "functionName": "EnableHorizontalWrapping"
-              },
-              {
-                "functionName": "EnableVerticalWrapping"
-              },
-              {
-                "functionName": "BorderTop"
-              },
-              {
-                "functionName": "BorderLeft"
-              },
-              {
-                "functionName": "BorderRight"
-              },
-              {
-                "functionName": "BorderBottom"
-              },
-              {
-                "functionName": "TriggerOffset"
-              },
-              {
-                "functionName": "SetTopBorder"
-              },
-              {
-                "functionName": "SetLeftBorder"
-              },
-              {
-                "functionName": "SetBottomBorder"
-              },
-              {
-                "functionName": "SetRightBorder"
-              },
-              {
-                "functionName": "SetTriggerOffset"
-              }
-            ]
-          },
           "propertyDescriptors": [
             {
               "value": "true",
@@ -7875,11 +7552,8 @@
         {
           "description": "Teleport the object when leaving one side of the screen so that it immediately reappears on the opposite side, maintaining speed and trajectory.",
           "fullName": "Screen Wrap (physics objects)",
-          "helpPath": "",
-          "iconUrl": "",
           "name": "ScreenWrapPhysics",
           "objectType": "",
-          "previewIconUrl": "",
           "quickCustomizationVisibility": "hidden",
           "eventsFunctions": [
             {
@@ -9109,65 +8783,6 @@
               "objectGroups": []
             }
           ],
-          "eventsFunctionsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "functionName": "onCreated"
-              },
-              {
-                "functionName": "doStepPreEvents"
-              },
-              {
-                "functionName": "IsHorizontalWrapping"
-              },
-              {
-                "functionName": "IsVerticalWrapping"
-              },
-              {
-                "functionName": "EnableHorizontalWrapping"
-              },
-              {
-                "functionName": "EnableVerticalWrapping"
-              },
-              {
-                "functionName": "BorderTop"
-              },
-              {
-                "functionName": "BorderLeft"
-              },
-              {
-                "functionName": "BorderRight"
-              },
-              {
-                "functionName": "BorderBottom"
-              },
-              {
-                "functionName": "TriggerOffset"
-              },
-              {
-                "functionName": "SetTopBorder"
-              },
-              {
-                "functionName": "SetLeftBorder"
-              },
-              {
-                "functionName": "SetBottomBorder"
-              },
-              {
-                "functionName": "SetRightBorder"
-              },
-              {
-                "functionName": "SetTriggerOffset"
-              },
-              {
-                "functionName": "SaveCurrentVelocities"
-              },
-              {
-                "functionName": "ApplySavedVelocities"
-              }
-            ]
-          },
           "propertyDescriptors": [
             {
               "value": "",
@@ -9334,18 +8949,12 @@
       "globalVariables": [],
       "sceneVariables": [],
       "eventsFunctions": [],
-      "eventsFunctionsFolderStructure": {
-        "folderName": "__ROOT"
-      },
       "eventsBasedBehaviors": [
         {
           "description": "Spawn (create) objects periodically.",
           "fullName": "Object spawner",
-          "helpPath": "",
-          "iconUrl": "",
           "name": "ObjectSpawner",
           "objectType": "",
-          "previewIconUrl": "",
           "eventsFunctions": [
             {
               "fullName": "",
@@ -10814,79 +10423,6 @@
               "objectGroups": []
             }
           ],
-          "eventsFunctionsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "functionName": "onCreated"
-              },
-              {
-                "functionName": "onActivate"
-              },
-              {
-                "functionName": "onDeActivate"
-              },
-              {
-                "functionName": "SpawnObject"
-              },
-              {
-                "functionName": "SetOffsetX"
-              },
-              {
-                "functionName": "SetOffsetY"
-              },
-              {
-                "functionName": "SetSpawnPeriod"
-              },
-              {
-                "functionName": "OffsetX"
-              },
-              {
-                "functionName": "OffsetY"
-              },
-              {
-                "functionName": "SpawnPeriod"
-              },
-              {
-                "functionName": "ResetSpawnTimer"
-              },
-              {
-                "functionName": "TimeBeforeSpawn"
-              },
-              {
-                "functionName": "ObjectWasJustSpawned"
-              },
-              {
-                "folderName": "Object spawner configuration",
-                "children": [
-                  {
-                    "functionName": "MaxQuantity"
-                  },
-                  {
-                    "functionName": "SetMaxQuantity"
-                  },
-                  {
-                    "functionName": "UnlimitedObjectCapacity"
-                  },
-                  {
-                    "functionName": "SetUnlimitedObjectCapacity"
-                  },
-                  {
-                    "functionName": "SpawnerCapacity"
-                  },
-                  {
-                    "functionName": "SetSpawnerCapacity"
-                  },
-                  {
-                    "functionName": "RandomPosition"
-                  },
-                  {
-                    "functionName": "SetRandomPosition"
-                  }
-                ]
-              }
-            ]
-          },
           "propertyDescriptors": [
             {
               "value": "1",
