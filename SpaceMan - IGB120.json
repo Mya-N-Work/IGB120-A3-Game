@@ -133,6 +133,14 @@
         "name": "small_asteroid_1.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/ship_bullet.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ship_bullet",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -165,7 +173,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3768772036750876,
+        "zoomFactor": 0.2616774116992152,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -211,15 +219,15 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 1082,
+          "height": 976,
           "keepRatio": true,
           "layer": "",
           "name": "SpawnArea",
           "opacity": 0,
           "persistentUuid": "6b85ff24-931a-4799-8c79-4514f3530bd6",
-          "width": 1908,
-          "x": 6,
-          "y": -3,
+          "width": 1800,
+          "x": 65,
+          "y": 47,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -234,9 +242,41 @@
           "name": "MediumA1",
           "persistentUuid": "404cf410-9a58-45bd-b768-df004352f5ee",
           "width": 0,
-          "x": 1103,
-          "y": 433,
+          "x": -829,
+          "y": 1372,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LargeA1",
+          "persistentUuid": "82334bc8-0009-4507-b63f-fcae2fcce171",
+          "width": 0,
+          "x": -867,
+          "y": 1639,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "SmallA1",
+          "persistentUuid": "dcfe3daa-cd09-407a-a10d-00d1528d06a1",
+          "width": 0,
+          "x": -816,
+          "y": 1519,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -351,6 +391,11 @@
                           "name": "Gun",
                           "x": 32,
                           "y": 16
+                        },
+                        {
+                          "name": "Spawn",
+                          "x": 16,
+                          "y": 0
                         }
                       ],
                       "originPoint": {
@@ -398,7 +443,13 @@
           "persistentUuid": "d617ae2e-0b92-4acc-b08e-d8166230c7a5",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "MovingAngle",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -489,16 +540,17 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "ship_bullet",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "ship_bullet.png",
+                      "image": "ship_bullet",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -518,16 +570,16 @@
                             "y": 0
                           },
                           {
-                            "x": 5,
+                            "x": 15,
                             "y": 0
                           },
                           {
-                            "x": 5,
-                            "y": 2
+                            "x": 15,
+                            "y": 6
                           },
                           {
                             "x": 0,
-                            "y": 2
+                            "y": 6
                           }
                         ]
                       ]
@@ -1140,9 +1192,86 @@
                     "MediumA1",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "SmallA1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "LargeA1",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "MediumA1",
+                        "MovingAngle",
+                        "=",
+                        "RandomInRange(0,360)"
+                      ]
+                    }
+                  ]
                 }
               ]
             },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "MediumA1.MovingAngle",
+                    "100",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "LevelUp",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -1158,63 +1287,66 @@
                   ]
                 }
               ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Level",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "LevelUp",
+                        "Player.PointX(\"Spawn\")",
+                        "Player.PointY(\"Spawn\")",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "SetXY"
                   },
                   "parameters": [
-                    "Player",
-                    "Level",
-                    "+",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
                     "LevelUp",
+                    "=",
                     "Player.PointX(\"Spawn\")",
-                    "Player.PointY(\"Spawn\")",
-                    ""
+                    "=",
+                    "Player.PointY(\"Spawn\") + 10"
                   ]
                 }
               ]
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "MediumA1",
-                "RandomInRange(0,360)",
-                "100",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ],
       "layers": [
