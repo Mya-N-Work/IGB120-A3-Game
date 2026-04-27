@@ -1297,6 +1297,50 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "GameOver",
+          "persistentUuid": "b5ab95c5-192f-45ab-a405-04e443f176d7",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "GAME OVER \nskill issue",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "GAME OVER \nskill issue",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1340,6 +1384,9 @@
           },
           {
             "objectName": "LevelDisplay"
+          },
+          {
+            "objectName": "GameOver"
           }
         ]
       },
@@ -2242,7 +2289,7 @@
                   "parameters": [
                     "Player",
                     "Health",
-                    "=",
+                    "<=",
                     "0"
                   ]
                 }
@@ -2254,6 +2301,18 @@
                   },
                   "parameters": [
                     "Player",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "GameOver",
+                    "800",
+                    "400",
                     ""
                   ]
                 }
@@ -2395,6 +2454,11 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
