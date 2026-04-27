@@ -172,6 +172,22 @@
         "name": "NewSprite4",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite6",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -204,7 +220,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5250860067782527,
+        "zoomFactor": 0.5427920802473302,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -323,7 +339,7 @@
           "persistentUuid": "b2200198-fdba-45b9-9e37-e36aed59522e",
           "width": 1456,
           "x": 226,
-          "y": 937,
+          "y": 938,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -351,13 +367,46 @@
           "depth": 1,
           "height": 37,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "XPBarInner",
           "persistentUuid": "5e2fbd90-d977-476b-92e9-d821e311fdba",
           "width": 7,
           "x": 269,
           "y": 941,
           "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Bullet",
+          "persistentUuid": "6562d1d2-807b-46d3-bce1-f6c4993680c5",
+          "width": 0,
+          "x": -857,
+          "y": 1813,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 8,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "HealthBar",
+          "persistentUuid": "05a6c082-fc27-42a3-b69c-043d3ca6acff",
+          "width": 1424,
+          "x": 242,
+          "y": 985,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -409,6 +458,11 @@
             },
             {
               "name": "MaxExp",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "name": "Health",
               "type": "number",
               "value": 100
             }
@@ -1120,7 +1174,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite4",
+                      "image": "NewSprite5",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1136,20 +1190,82 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 2,
-                            "y": 1
+                            "x": 0,
+                            "y": 0
                           },
                           {
-                            "x": 3,
-                            "y": 1
+                            "x": 1,
+                            "y": 0
                           },
                           {
-                            "x": 3,
+                            "x": 1,
                             "y": 16
                           },
                           {
-                            "x": 2,
+                            "x": 0,
                             "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "HealthBar",
+          "persistentUuid": "4a4d2f30-ecd1-4ad4-bacd-9352bbefa32a",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite6",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 100,
+                            "y": 0
+                          },
+                          {
+                            "x": 100,
+                            "y": 8
+                          },
+                          {
+                            "x": 0,
+                            "y": 8
                           }
                         ]
                       ]
@@ -1166,6 +1282,9 @@
         "children": [
           {
             "objectName": "Player"
+          },
+          {
+            "objectName": "HealthBar"
           },
           {
             "objectName": "Timer"
@@ -1379,6 +1498,33 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Player",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -1473,6 +1619,30 @@
                     },
                     {
                       "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "SmallA1",
+                        "MediumA1.X() + RandomInRange(1,10)",
+                        "MediumA1.Y() + RandomInRange(1,10)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "SmallA1",
+                        "MediumA1.X() + RandomInRange(1,10)",
+                        "MediumA1.Y() + RandomInRange(1,10)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
@@ -1541,8 +1711,8 @@
                       "parameters": [
                         "",
                         "MediumA1",
-                        "LargeA1.X()",
-                        "LargeA1.Y()",
+                        "LargeA1.X() + RandomInRange(1,10)",
+                        "LargeA1.Y() + RandomInRange(1,10)",
                         ""
                       ]
                     },
@@ -1553,8 +1723,8 @@
                       "parameters": [
                         "",
                         "MediumA1",
-                        "LargeA1.X()",
-                        "LargeA1.Y()",
+                        "LargeA1.X() + RandomInRange(1,10)",
+                        "LargeA1.Y() + RandomInRange(1,10)",
                         ""
                       ]
                     },
@@ -1566,7 +1736,70 @@
                         "Player",
                         "Exp",
                         "+",
-                        "10"
+                        "15"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "SmallA1",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "SmallA1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "+",
+                        "5"
                       ]
                     }
                   ]
@@ -1581,10 +1814,28 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SetRandomPosition"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "yes",
+                    ""
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -1598,18 +1849,25 @@
                     "<",
                     "5"
                   ]
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
-                    "value": "SceneInstancesCount"
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
                   },
                   "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
                     "MediumA1",
-                    "LargeA1",
-                    "<",
-                    "5"
+                    ""
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "value": "SceneInstancesCount"
@@ -1625,26 +1883,33 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SetRandomPosition"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "yes",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
                   },
                   "parameters": [
                     "SpawnArea",
                     "ObjectSpawner",
-                    "MediumA1",
+                    "SmallA1",
                     ""
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "LargeA1",
+                    "<",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
@@ -1655,23 +1920,33 @@
                     "LargeA1",
                     ""
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                    "value": "HasNoForces"
                   },
                   "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "SmallA1",
-                    ""
+                    "MediumA1"
                   ]
                 }
               ],
+              "actions": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -1683,7 +1958,36 @@
                         "100",
                         "1"
                       ]
-                    },
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HasNoForces"
+                  },
+                  "parameters": [
+                    "SmallA1"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
                     {
                       "type": {
                         "value": "AddForceAL"
@@ -1691,10 +1995,39 @@
                       "parameters": [
                         "SmallA1",
                         "RandomInRange(0,360)",
-                        "150",
+                        "100",
                         "1"
                       ]
-                    },
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HasNoForces"
+                  },
+                  "parameters": [
+                    "LargeA1"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
                     {
                       "type": {
                         "value": "AddForceAL"
@@ -1702,7 +2035,7 @@
                       "parameters": [
                         "LargeA1",
                         "RandomInRange(0,360)",
-                        "50",
+                        "100",
                         "1"
                       ]
                     }
@@ -1718,6 +2051,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1844,7 +2178,20 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "MediumA1",
+                "Player",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
           "actions": []
         }
       ],
