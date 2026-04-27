@@ -475,6 +475,7 @@
           "effects": [],
           "behaviors": [
             {
+              "isFolded": true,
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
               "FireCooldown": 0.4,
@@ -505,6 +506,7 @@
               "RandomizedAngle": 0
             },
             {
+              "isFolded": true,
               "name": "ObjectSpawner",
               "type": "ObjectSpawner::ObjectSpawner",
               "SpawnPeriod": 2,
@@ -516,6 +518,17 @@
               "SpawnerCapacity": 0,
               "UnlimitedCapacity": true,
               "RandomPosition": true
+            },
+            {
+              "name": "ScreenWrap",
+              "type": "ScreenWrap::ScreenWrap",
+              "HorizontalWrapping": true,
+              "VerticalWrapping": true,
+              "BorderTop": 0,
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderBottom": 0,
+              "TriggerOffset": 0
             }
           ],
           "animations": [
@@ -2223,7 +2236,7 @@
                     "HealthBar",
                     "Resizable",
                     "=",
-                    "Player.Health * 10"
+                    "Player.Health * 14.25"
                   ]
                 }
               ]
