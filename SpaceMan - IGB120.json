@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 261,
+    "build": 265,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -81,7 +81,6 @@
     "authorUsernames": [],
     "categories": [],
     "playableDevices": [
-      "mobile",
       "mobile"
     ],
     "extensionProperties": [],
@@ -145,8 +144,32 @@
       {
         "file": "assets/NewSprite.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite.png\"}",
         "name": "NewSprite",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite4",
         "smoothed": false,
         "userAdded": false
       }
@@ -181,7 +204,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.44485159988866624,
+        "zoomFactor": 0.5250860067782527,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -227,15 +250,15 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 976,
+          "height": 721,
           "keepRatio": true,
           "layer": "",
           "name": "SpawnArea",
           "opacity": 0,
           "persistentUuid": "6b85ff24-931a-4799-8c79-4514f3530bd6",
-          "width": 1800,
-          "x": 65,
-          "y": 47,
+          "width": 1210,
+          "x": 331,
+          "y": 106,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -295,13 +318,46 @@
           "depth": 6,
           "height": 45,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "XPBarOutline",
           "persistentUuid": "b2200198-fdba-45b9-9e37-e36aed59522e",
-          "width": 1645,
-          "x": 142,
-          "y": 929,
+          "width": 1456,
+          "x": 226,
+          "y": 937,
           "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelDisplay",
+          "persistentUuid": "b0824868-b352-4a36-887c-4567a781db9f",
+          "width": 0,
+          "x": 1682,
+          "y": 931,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 37,
+          "keepRatio": true,
+          "layer": "",
+          "name": "XPBarInner",
+          "persistentUuid": "5e2fbd90-d977-476b-92e9-d821e311fdba",
+          "width": 7,
+          "x": 269,
+          "y": 941,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -350,6 +406,11 @@
               "name": "Level",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "MaxExp",
+              "type": "number",
+              "value": 100
             }
           ],
           "effects": [],
@@ -937,6 +998,167 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "WaveCleared",
+          "persistentUuid": "cabf3b2e-2ac1-456e-8e4b-f57539993887",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "WAVE CLEARED",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 60,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "WAVE CLEARED",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "LevelDisplay",
+          "persistentUuid": "68c6f0ab-f843-4a52-8fd9-1dbf509e5f66",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
+              "bottomEdgeAnchor": 2,
+              "leftEdgeAnchor": 1,
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 1,
+              "topEdgeAnchor": 2,
+              "useLegacyBottomAndRightAnchors": false
+            }
+          ],
+          "string": "Level: ",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 50,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Level: ",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 50,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "XPBarInner",
+          "persistentUuid": "571bad23-6d3a-4c81-95fe-336e5821301a",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite4",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 1
+                          },
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 3,
+                            "y": 16
+                          },
+                          {
+                            "x": 2,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -968,6 +1190,15 @@
           },
           {
             "objectName": "XPBarOutline"
+          },
+          {
+            "objectName": "XPBarInner"
+          },
+          {
+            "objectName": "WaveCleared"
+          },
+          {
+            "objectName": "LevelDisplay"
           }
         ]
       },
@@ -1208,7 +1439,17 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -1244,6 +1485,93 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "LargeA1",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "LargeA1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "MediumA1",
+                        "LargeA1.X()",
+                        "LargeA1.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "MediumA1",
+                        "LargeA1.X()",
+                        "LargeA1.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -1259,7 +1587,41 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "MediumA1",
+                    "<",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "LargeA1",
+                    "<",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "SmallA1",
+                    "<",
+                    "5"
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -1290,7 +1652,7 @@
                   "parameters": [
                     "SpawnArea",
                     "ObjectSpawner",
-                    "SmallA1",
+                    "LargeA1",
                     ""
                   ]
                 },
@@ -1301,7 +1663,7 @@
                   "parameters": [
                     "SpawnArea",
                     "ObjectSpawner",
-                    "LargeA1",
+                    "SmallA1",
                     ""
                   ]
                 }
@@ -1309,43 +1671,41 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
+                  "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetNumberObjectVariable"
+                        "value": "AddForceAL"
                       },
                       "parameters": [
                         "MediumA1",
-                        "MovingAngle",
-                        "=",
-                        "RandomInRange(0,360)"
+                        "RandomInRange(0,360)",
+                        "100",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "SmallA1",
+                        "RandomInRange(0,360)",
+                        "150",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "LargeA1",
+                        "RandomInRange(0,360)",
+                        "50",
+                        "1"
                       ]
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AddForceAL"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "MediumA1.MovingAngle",
-                    "100",
-                    "0"
                   ]
                 }
               ]
@@ -1373,7 +1733,7 @@
                     "Player",
                     "Exp",
                     "=",
-                    "100"
+                    "Player.MaxExp"
                   ]
                 }
               ],
@@ -1412,6 +1772,28 @@
                         "Player.PointY(\"Spawn\")",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "MaxExp",
+                        "=",
+                        "Player.MaxExp * 1.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "=",
+                        "0"
+                      ]
                     }
                   ]
                 }
@@ -1432,11 +1814,38 @@
                     "=",
                     "Player.PointY(\"Spawn\") + 10"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelDisplay",
+                    "Text",
+                    "=",
+                    "Player.Level"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "XPBarInner",
+                    "Resizable",
+                    "=",
+                    "Player.Exp/Player.MaxExp * 3000"
+                  ]
                 }
               ]
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -1504,9 +1913,67 @@
               }
             }
           ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
         {
           "name": "Animation",
           "type": "AnimatableCapability::AnimatableBehavior"
@@ -1608,12 +2075,18 @@
       "globalVariables": [],
       "sceneVariables": [],
       "eventsFunctions": [],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT"
+      },
       "eventsBasedBehaviors": [
         {
           "description": "Fire bullets with built-in cooldown, ammo, reloading, and overheating. Once added to your object that must shoot, use the behavior actions to fire another object as a bullet. These actions check all constraints internally (can be called without conditions, they will only fire when ready) and will make the bullet move (using a permanent force).",
           "fullName": "Fire bullets",
+          "helpPath": "",
+          "iconUrl": "",
           "name": "FireBullet",
           "objectType": "",
+          "previewIconUrl": "",
           "eventsFunctions": [
             {
               "fullName": "",
@@ -6298,6 +6771,265 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPreEvents"
+              },
+              {
+                "functionName": "FireTowardObject"
+              },
+              {
+                "functionName": "FireTowardPosition"
+              },
+              {
+                "functionName": "Fire"
+              },
+              {
+                "folderName": "Firing",
+                "children": [
+                  {
+                    "functionName": "FireSingleBullet"
+                  },
+                  {
+                    "functionName": "HasJustFired"
+                  },
+                  {
+                    "functionName": "BulletRotationEnabled"
+                  },
+                  {
+                    "functionName": "SetAngleVariance"
+                  },
+                  {
+                    "functionName": "SetBulletLayer"
+                  },
+                  {
+                    "functionName": "SetRotateBullet"
+                  },
+                  {
+                    "functionName": "Cooldown"
+                  },
+                  {
+                    "functionName": "SetCooldownOp"
+                  },
+                  {
+                    "functionName": "SetCooldown"
+                  },
+                  {
+                    "functionName": "CooldownTimeLeft"
+                  },
+                  {
+                    "functionName": "IsReadyToShoot"
+                  },
+                  {
+                    "functionName": "IsFiringCooldownActive"
+                  }
+                ]
+              },
+              {
+                "functionName": "ReloadAmmo"
+              },
+              {
+                "folderName": "Multi-Fire",
+                "children": [
+                  {
+                    "functionName": "FiringArc"
+                  },
+                  {
+                    "functionName": "SetFiringArcOp"
+                  },
+                  {
+                    "functionName": "SetFiringArc"
+                  },
+                  {
+                    "functionName": "SetBulletSpeedVariance"
+                  },
+                  {
+                    "functionName": "BulletQuantity"
+                  },
+                  {
+                    "functionName": "SetBulletQuantityOp"
+                  },
+                  {
+                    "functionName": "SetBulletQuantity"
+                  },
+                  {
+                    "functionName": "BulletLayer"
+                  }
+                ]
+              },
+              {
+                "folderName": "Firing variance",
+                "children": [
+                  {
+                    "functionName": "AngleVariance"
+                  },
+                  {
+                    "functionName": "SetAngleVarianceOp"
+                  },
+                  {
+                    "functionName": "BulletSpeedVariance"
+                  },
+                  {
+                    "functionName": "SetBulletSpeedVarianceOp"
+                  }
+                ]
+              },
+              {
+                "folderName": "Ammo",
+                "children": [
+                  {
+                    "functionName": "SetUnlimitedAmmo"
+                  },
+                  {
+                    "functionName": "AmmoQuantity"
+                  },
+                  {
+                    "functionName": "SetAmmoQuantityOp"
+                  },
+                  {
+                    "functionName": "SetAmmoQuantity"
+                  },
+                  {
+                    "functionName": "MaxAmmo"
+                  },
+                  {
+                    "functionName": "SetMaxAmmoOp"
+                  },
+                  {
+                    "functionName": "SetMaxAmmo"
+                  },
+                  {
+                    "functionName": "IsUnlimitedAmmo"
+                  },
+                  {
+                    "functionName": "IsOutOfAmmo"
+                  }
+                ]
+              },
+              {
+                "folderName": "Reload",
+                "children": [
+                  {
+                    "functionName": "ReloadDuration"
+                  },
+                  {
+                    "functionName": "SetReloadDurationOp"
+                  },
+                  {
+                    "functionName": "SetReloadDuration"
+                  },
+                  {
+                    "functionName": "ShotsPerReload"
+                  },
+                  {
+                    "functionName": "SetShotsPerReloadOp"
+                  },
+                  {
+                    "functionName": "SetShotsPerReload"
+                  },
+                  {
+                    "functionName": "SetAutomaticReload"
+                  },
+                  {
+                    "functionName": "ShotsBeforeNextReload"
+                  },
+                  {
+                    "functionName": "ReloadTimeLeft"
+                  },
+                  {
+                    "functionName": "IsReloadInProgress"
+                  },
+                  {
+                    "functionName": "IsAutomaticReloadingEnabled"
+                  },
+                  {
+                    "functionName": "IsReloadNeeded"
+                  }
+                ]
+              },
+              {
+                "folderName": "Overheat",
+                "children": [
+                  {
+                    "functionName": "OverheatDuration"
+                  },
+                  {
+                    "functionName": "SetOverheatDurationOp"
+                  },
+                  {
+                    "functionName": "SetOverheatDuration"
+                  },
+                  {
+                    "functionName": "HeatIncreasePerShot"
+                  },
+                  {
+                    "functionName": "SetHeatPerShotOp"
+                  },
+                  {
+                    "functionName": "SetHeatPerShot"
+                  },
+                  {
+                    "functionName": "LinearCoolingRate"
+                  },
+                  {
+                    "functionName": "SetLinearCoolingRateOp"
+                  },
+                  {
+                    "functionName": "SetLinearCoolingRate"
+                  },
+                  {
+                    "functionName": "ExponentialCoolingRate"
+                  },
+                  {
+                    "functionName": "SetExponentialCoolingRateOp"
+                  },
+                  {
+                    "functionName": "SetExponentialCoolingRate"
+                  },
+                  {
+                    "functionName": "HeatLevel"
+                  },
+                  {
+                    "functionName": "OverheatTimeLeft"
+                  },
+                  {
+                    "functionName": "IsOverheated"
+                  }
+                ]
+              },
+              {
+                "folderName": "Stats",
+                "children": [
+                  {
+                    "functionName": "ResetTotalShotsFired"
+                  },
+                  {
+                    "functionName": "ResetTotalBulletsCreated"
+                  },
+                  {
+                    "functionName": "ResetTotalReloadsCompleted"
+                  },
+                  {
+                    "functionName": "TotalShotsFired"
+                  },
+                  {
+                    "functionName": "TotalBulletsCreated"
+                  },
+                  {
+                    "functionName": "TotalReloadsCompleted"
+                  }
+                ]
+              },
+              {
+                "functionName": "IncreaseAmmo"
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "0.1",
@@ -6671,12 +7403,18 @@
       "globalVariables": [],
       "sceneVariables": [],
       "eventsFunctions": [],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT"
+      },
       "eventsBasedBehaviors": [
         {
           "description": "Teleport the object when leaving one side of the screen so that it immediately reappears on the opposite side, maintaining speed and trajectory.",
           "fullName": "Screen Wrap",
+          "helpPath": "",
+          "iconUrl": "",
           "name": "ScreenWrap",
           "objectType": "",
+          "previewIconUrl": "",
           "quickCustomizationVisibility": "hidden",
           "eventsFunctions": [
             {
@@ -7693,6 +8431,59 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPostEvents"
+              },
+              {
+                "functionName": "IsHorizontalWrapping"
+              },
+              {
+                "functionName": "IsVerticalWrapping"
+              },
+              {
+                "functionName": "EnableHorizontalWrapping"
+              },
+              {
+                "functionName": "EnableVerticalWrapping"
+              },
+              {
+                "functionName": "BorderTop"
+              },
+              {
+                "functionName": "BorderLeft"
+              },
+              {
+                "functionName": "BorderRight"
+              },
+              {
+                "functionName": "BorderBottom"
+              },
+              {
+                "functionName": "TriggerOffset"
+              },
+              {
+                "functionName": "SetTopBorder"
+              },
+              {
+                "functionName": "SetLeftBorder"
+              },
+              {
+                "functionName": "SetBottomBorder"
+              },
+              {
+                "functionName": "SetRightBorder"
+              },
+              {
+                "functionName": "SetTriggerOffset"
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "true",
@@ -7774,8 +8565,11 @@
         {
           "description": "Teleport the object when leaving one side of the screen so that it immediately reappears on the opposite side, maintaining speed and trajectory.",
           "fullName": "Screen Wrap (physics objects)",
+          "helpPath": "",
+          "iconUrl": "",
           "name": "ScreenWrapPhysics",
           "objectType": "",
+          "previewIconUrl": "",
           "quickCustomizationVisibility": "hidden",
           "eventsFunctions": [
             {
@@ -9005,6 +9799,65 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPreEvents"
+              },
+              {
+                "functionName": "IsHorizontalWrapping"
+              },
+              {
+                "functionName": "IsVerticalWrapping"
+              },
+              {
+                "functionName": "EnableHorizontalWrapping"
+              },
+              {
+                "functionName": "EnableVerticalWrapping"
+              },
+              {
+                "functionName": "BorderTop"
+              },
+              {
+                "functionName": "BorderLeft"
+              },
+              {
+                "functionName": "BorderRight"
+              },
+              {
+                "functionName": "BorderBottom"
+              },
+              {
+                "functionName": "TriggerOffset"
+              },
+              {
+                "functionName": "SetTopBorder"
+              },
+              {
+                "functionName": "SetLeftBorder"
+              },
+              {
+                "functionName": "SetBottomBorder"
+              },
+              {
+                "functionName": "SetRightBorder"
+              },
+              {
+                "functionName": "SetTriggerOffset"
+              },
+              {
+                "functionName": "SaveCurrentVelocities"
+              },
+              {
+                "functionName": "ApplySavedVelocities"
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "",
@@ -9171,12 +10024,18 @@
       "globalVariables": [],
       "sceneVariables": [],
       "eventsFunctions": [],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT"
+      },
       "eventsBasedBehaviors": [
         {
           "description": "Spawn (create) objects periodically.",
           "fullName": "Object spawner",
+          "helpPath": "",
+          "iconUrl": "",
           "name": "ObjectSpawner",
           "objectType": "",
+          "previewIconUrl": "",
           "eventsFunctions": [
             {
               "fullName": "",
@@ -10645,6 +11504,79 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "onActivate"
+              },
+              {
+                "functionName": "onDeActivate"
+              },
+              {
+                "functionName": "SpawnObject"
+              },
+              {
+                "functionName": "SetOffsetX"
+              },
+              {
+                "functionName": "SetOffsetY"
+              },
+              {
+                "functionName": "SetSpawnPeriod"
+              },
+              {
+                "functionName": "OffsetX"
+              },
+              {
+                "functionName": "OffsetY"
+              },
+              {
+                "functionName": "SpawnPeriod"
+              },
+              {
+                "functionName": "ResetSpawnTimer"
+              },
+              {
+                "functionName": "TimeBeforeSpawn"
+              },
+              {
+                "functionName": "ObjectWasJustSpawned"
+              },
+              {
+                "folderName": "Object spawner configuration",
+                "children": [
+                  {
+                    "functionName": "MaxQuantity"
+                  },
+                  {
+                    "functionName": "SetMaxQuantity"
+                  },
+                  {
+                    "functionName": "UnlimitedObjectCapacity"
+                  },
+                  {
+                    "functionName": "SetUnlimitedObjectCapacity"
+                  },
+                  {
+                    "functionName": "SpawnerCapacity"
+                  },
+                  {
+                    "functionName": "SetSpawnerCapacity"
+                  },
+                  {
+                    "functionName": "RandomPosition"
+                  },
+                  {
+                    "functionName": "SetRandomPosition"
+                  }
+                ]
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "1",
