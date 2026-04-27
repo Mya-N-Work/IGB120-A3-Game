@@ -365,7 +365,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 37,
+          "height": 40,
           "keepRatio": true,
           "layer": "UI",
           "name": "XPBarInner",
@@ -403,7 +403,7 @@
           "layer": "UI",
           "name": "HealthBar",
           "persistentUuid": "05a6c082-fc27-42a3-b69c-043d3ca6acff",
-          "width": 1424,
+          "width": 1425,
           "x": 242,
           "y": 985,
           "zOrder": 13,
@@ -463,6 +463,11 @@
             },
             {
               "name": "Health",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "name": "MaxHealth",
               "type": "number",
               "value": 100
             }
@@ -1498,33 +1503,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "Health",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Player",
-                    ""
-                  ]
-                }
-              ]
             }
           ],
           "parameters": []
@@ -2051,7 +2029,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2114,8 +2091,8 @@
                       "parameters": [
                         "Player",
                         "MaxExp",
-                        "=",
-                        "Player.MaxExp * 1.3"
+                        "*",
+                        "1.3"
                       ]
                     },
                     {
@@ -2127,6 +2104,28 @@
                         "Exp",
                         "=",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "MaxHealth",
+                        "*",
+                        "1.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Health",
+                        "=",
+                        "Player.MaxHealth"
                       ]
                     }
                   ]
@@ -2177,22 +2176,99 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Health/Damage",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "MediumA1",
-                "Player",
-                "",
-                "",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Player",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "HealthBar",
+                    "Resizable",
+                    "=",
+                    "Player.Health * 10"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    ""
+                  ]
+                }
               ]
             }
           ],
-          "actions": []
+          "parameters": []
         }
       ],
       "layers": [
