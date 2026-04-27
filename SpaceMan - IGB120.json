@@ -220,7 +220,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5427920802473302,
+        "zoomFactor": 0.3768772036750893,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -470,19 +470,23 @@
               "name": "MaxHealth",
               "type": "number",
               "value": 100
+            },
+            {
+              "name": "XPRequired",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
           "behaviors": [
             {
-              "isFolded": true,
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
               "FireCooldown": 0.4,
               "HasJustFired": false,
               "RotateBullet": true,
               "FiringArc": 5,
-              "BulletQuantity": 3,
+              "BulletQuantity": 1,
               "AngleVariance": 0,
               "BulletSpeedVariance": 0,
               "AmmoQuantity": 0,
@@ -1345,6 +1349,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1525,6 +1530,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1554,7 +1560,7 @@
                     "Player.PointY(\"Gun\")",
                     "Bullet",
                     "Player.Angle()",
-                    "500",
+                    "1000",
                     ""
                   ]
                 }
@@ -1986,7 +1992,7 @@
                       "parameters": [
                         "SmallA1",
                         "RandomInRange(0,360)",
-                        "100",
+                        "150",
                         "1"
                       ]
                     }
@@ -2026,7 +2032,7 @@
                       "parameters": [
                         "LargeA1",
                         "RandomInRange(0,360)",
-                        "100",
+                        "50",
                         "1"
                       ]
                     }
@@ -2180,7 +2186,36 @@
                     "XPBarInner",
                     "Resizable",
                     "=",
-                    "Player.Exp/Player.MaxExp * 3000"
+                    "(Player.Exp/Player.MaxExp) * 2973"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Exp",
+                    ">",
+                    "Player.MaxExp"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Exp",
+                    "=",
+                    "Player.MaxExp"
                   ]
                 }
               ]
@@ -2236,7 +2271,7 @@
                     "HealthBar",
                     "Resizable",
                     "=",
-                    "Player.Health * 14.25"
+                    "Player.Health/Player.MaxHealth * 1425"
                   ]
                 }
               ]
@@ -2275,6 +2310,84 @@
                   },
                   "parameters": [
                     "MediumA1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "SmallA1",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "SmallA1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "LargeA1",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "LargeA1",
                     ""
                   ]
                 }
