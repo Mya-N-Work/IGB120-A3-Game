@@ -314,6 +314,30 @@
         "name": "NewSprite7",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/PNGs/Main Ship - Base - Full health.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/PNGs/Main Ship - Base - Full health.png\",\"extension\":\".png\"}",
+        "name": "assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/PNGs/Main Ship - Base - Full health.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Space Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Space Background.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Space Background2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Space Background2.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -535,6 +559,23 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 2782,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "Background",
+          "persistentUuid": "dc27407a-e41d-4213-a6d7-4c404e7fe2e0",
+          "width": 3171,
+          "x": -856,
+          "y": -338,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -672,7 +713,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "ship.png",
+                      "image": "assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/PNGs/Main Ship - Base - Full health.png",
                       "points": [
                         {
                           "name": "Gun",
@@ -699,20 +740,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 11,
+                            "y": 9
                           },
                           {
-                            "x": 32,
-                            "y": 0
+                            "x": 37,
+                            "y": 9
                           },
                           {
-                            "x": 32,
-                            "y": 32
+                            "x": 37,
+                            "y": 39
                           },
                           {
-                            "x": 0,
-                            "y": 32
+                            "x": 11,
+                            "y": 39
                           }
                         ]
                       ]
@@ -1507,6 +1548,18 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 2000,
+          "name": "Background",
+          "persistentUuid": "09370209-6023-4728-8e35-185550e6d19f",
+          "texture": "assets/Space Background2.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 2000,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -1514,6 +1567,9 @@
         "children": [
           {
             "objectName": "Player"
+          },
+          {
+            "objectName": "Background"
           },
           {
             "objectName": "SplittingShotsUpgrade"
@@ -2887,6 +2943,60 @@
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Background",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
