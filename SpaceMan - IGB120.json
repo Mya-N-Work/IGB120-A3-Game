@@ -338,6 +338,14 @@
         "name": "assets/Space Background2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/ship.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ship",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -379,6 +387,11 @@
       "variables": [
         {
           "name": "NextSpawnTime",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "WaveNum",
           "type": "number",
           "value": 0
         }
@@ -713,7 +726,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/PNGs/Main Ship - Base - Full health.png",
+                      "image": "ship",
                       "points": [
                         {
                           "name": "Gun",
@@ -740,20 +753,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 11,
-                            "y": 9
+                            "x": 0,
+                            "y": 0
                           },
                           {
-                            "x": 37,
-                            "y": 9
+                            "x": 32,
+                            "y": 0
                           },
                           {
-                            "x": 37,
-                            "y": 39
+                            "x": 32,
+                            "y": 32
                           },
                           {
-                            "x": 11,
-                            "y": 39
+                            "x": 0,
+                            "y": 32
                           }
                         ]
                       ]
@@ -2936,6 +2949,28 @@
           "colorR": 74,
           "creationTime": 0,
           "name": "Audio",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Waves",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [],
