@@ -279,7 +279,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3768772036750893,
+        "zoomFactor": 0.31928945896901817,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -466,6 +466,22 @@
           "x": 242,
           "y": 985,
           "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "WaveCounter",
+          "persistentUuid": "5736c13d-b9ae-4670-a355-972dc14800b3",
+          "width": 0,
+          "x": 847,
+          "y": 12,
+          "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1439,6 +1455,50 @@
             "LabelText": "Bullets Split on Impact",
             "PressedLabelOffsetY": 2
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "WaveCounter",
+          "persistentUuid": "200e5348-f3e6-4581-a8eb-07a6f299310a",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Wave: 0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 50,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Wave: 0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 50,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1491,6 +1551,9 @@
           },
           {
             "objectName": "ROFUpgrade"
+          },
+          {
+            "objectName": "WaveCounter"
           }
         ]
       },
