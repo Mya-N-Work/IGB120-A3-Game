@@ -346,7 +346,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.953861854208957,
+        "zoomFactor": 0.30887412163426714,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -459,12 +459,12 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "LevelDisplay",
           "persistentUuid": "b0824868-b352-4a36-887c-4567a781db9f",
           "width": 0,
           "x": 1682,
-          "y": 931,
+          "y": 926,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -508,7 +508,7 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "WaveCounter",
           "persistentUuid": "5736c13d-b9ae-4670-a355-972dc14800b3",
           "width": 0,
@@ -525,7 +525,7 @@
           "depth": 1,
           "height": 43,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "WhiteFantasyPixelBar",
           "persistentUuid": "4ef9dab0-a1a3-4e1b-9ee5-58ac5be19fd0",
           "width": 1428,
@@ -2545,6 +2545,17 @@
                     "=",
                     "Player.MaxExp",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelDisplay",
+                    "Text",
+                    "=",
+                    "Player.Level"
                   ]
                 }
               ]
