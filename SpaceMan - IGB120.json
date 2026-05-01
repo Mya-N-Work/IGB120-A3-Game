@@ -346,6 +346,14 @@
         "name": "ship",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/SpawnArea.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpawnArea",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -1184,7 +1192,13 @@
           "persistentUuid": "a17a1e55-9c18-4cae-b4eb-40637fa9caa9",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "SpawnPoint",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -1201,7 +1215,59 @@
               "RandomPosition": true
             }
           ],
-          "animations": []
+          "animations": [
+            {
+              "name": "SpawnArea",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "SpawnArea",
+                      "points": [
+                        {
+                          "name": "TopRight",
+                          "x": 64,
+                          "y": 0
+                        },
+                        {
+                          "name": "BottomLeft",
+                          "x": 0,
+                          "y": 64
+                        },
+                        {
+                          "name": "BottomRight",
+                          "x": 64,
+                          "y": 64
+                        },
+                        {
+                          "name": "TopLeft",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "assetStoreId": "",
@@ -1507,7 +1573,13 @@
           "persistentUuid": "4664252b-f1b0-4ab9-8bf4-e49cd844f774",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Health",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -2214,7 +2286,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2324,58 +2395,145 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "HasNoForces"
-                  },
-                  "parameters": [
-                    "MediumA1"
-                  ]
-                }
-              ],
-              "actions": [],
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "AsteroidMovement",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AddForceAL"
+                        "value": "HasNoForces"
                       },
                       "parameters": [
-                        "MediumA1",
-                        "RandomInRange(0,360)",
-                        "100",
-                        "1"
+                        "MediumA1"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "MediumA1",
+                            "RandomInRange(0,360)",
+                            "100",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "HasNoForces"
+                      },
+                      "parameters": [
+                        "SmallA1"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "SmallA1",
+                            "RandomInRange(0,360)",
+                            "150",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "HasNoForces"
+                      },
+                      "parameters": [
+                        "LargeA1"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "LargeA1",
+                            "RandomInRange(0,360)",
+                            "50",
+                            "1"
+                          ]
+                        }
                       ]
                     }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "HasNoForces"
-                  },
-                  "parameters": [
-                    "SmallA1"
-                  ]
-                }
-              ],
-              "actions": [],
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "EnemySpawning",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -2390,58 +2548,141 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AddForceAL"
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
-                        "SmallA1",
-                        "RandomInRange(0,360)",
-                        "150",
-                        "1"
+                        "SpawnArea",
+                        "SpawnPoint",
+                        "=",
+                        "RandomInRange(1,4)"
                       ]
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "HasNoForces"
-                  },
-                  "parameters": [
-                    "LargeA1"
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "SpawnArea",
+                            "SpawnPoint",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Enemy1",
+                            "SpawnArea.PointX(\"BottomLeft\")",
+                            "SpawnArea.PointY(\"BottomLeft\")",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "SpawnArea",
+                            "SpawnPoint",
+                            "=",
+                            "3"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Enemy1",
+                            "SpawnArea.PointX(\"TopRight\")",
+                            "SpawnArea.PointY(\"TopRight\")",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "SpawnArea",
+                            "SpawnPoint",
+                            "=",
+                            "4"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Enemy1",
+                            "SpawnArea.PointX(\"BottomRight\")",
+                            "SpawnArea.PointY(\"BottomRight\")",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "SpawnArea",
+                            "SpawnPoint",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Enemy1",
+                            "SpawnArea.PointX(\"TopLeft\")",
+                            "SpawnArea.PointY(\"TopLeft\")",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AddForceAL"
-                      },
-                      "parameters": [
-                        "LargeA1",
-                        "RandomInRange(0,360)",
-                        "50",
-                        "1"
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "parameters": []
             }
           ],
           "parameters": []
@@ -2451,6 +2692,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2492,18 +2734,6 @@
                         "Level",
                         "+",
                         "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "LevelUp",
-                        "Player.PointX(\"Spawn\")",
-                        "Player.PointY(\"Spawn\")",
-                        ""
                       ]
                     },
                     {
@@ -2973,7 +3203,25 @@
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceTowardObject"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "Player",
+                    "100",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
           "parameters": []
         }
       ],
