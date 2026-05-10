@@ -354,6 +354,38 @@
         "name": "SpawnArea",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite8",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite9.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite9",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite10.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite10",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite11.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite11",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -386,7 +418,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3088741216342673,
+        "zoomFactor": 0.2890516203134937,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -437,15 +469,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 721,
-          "keepRatio": true,
+          "height": 1083,
           "layer": "",
           "name": "SpawnArea",
           "opacity": 0,
           "persistentUuid": "6b85ff24-931a-4799-8c79-4514f3530bd6",
-          "width": 1210,
-          "x": 331,
-          "y": 106,
+          "width": 1083,
+          "x": 382,
+          "y": -1,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -460,8 +491,8 @@
           "name": "MediumA1",
           "persistentUuid": "404cf410-9a58-45bd-b768-df004352f5ee",
           "width": 0,
-          "x": -829,
-          "y": 1372,
+          "x": -1223,
+          "y": 1319,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -476,8 +507,8 @@
           "name": "LargeA1",
           "persistentUuid": "82334bc8-0009-4507-b63f-fcae2fcce171",
           "width": 0,
-          "x": -867,
-          "y": 1639,
+          "x": -1240,
+          "y": 1714,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -492,8 +523,8 @@
           "name": "SmallA1",
           "persistentUuid": "dcfe3daa-cd09-407a-a10d-00d1528d06a1",
           "width": 0,
-          "x": -816,
-          "y": 1519,
+          "x": -1205,
+          "y": 1559,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -597,6 +628,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "UpgradeBox",
+          "persistentUuid": "6f30fe6b-92cd-4382-984f-b34fb70d05af",
+          "width": 0,
+          "x": -1228,
+          "y": 1859,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -662,6 +709,84 @@
               "name": "XPRequired",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "RandUpgrade1",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "RandUpgrade2",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "RandUpgrade3",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "UpgradeList",
+              "type": "array",
+              "children": [
+                {
+                  "type": "string",
+                  "value": "ROFup"
+                },
+                {
+                  "type": "string",
+                  "value": "LargeBullets"
+                },
+                {
+                  "type": "string",
+                  "value": "TwinGuns"
+                },
+                {
+                  "type": "string",
+                  "value": "SplitShots"
+                },
+                {
+                  "type": "string",
+                  "value": "TripleShot"
+                },
+                {
+                  "type": "string",
+                  "value": "TrackingBullets"
+                },
+                {
+                  "type": "string",
+                  "value": "HomingBullets"
+                },
+                {
+                  "type": "string",
+                  "value": "KineticBullets"
+                },
+                {
+                  "type": "string",
+                  "value": "BoredBarrels"
+                },
+                {
+                  "type": "string",
+                  "value": "LazerFocus"
+                },
+                {
+                  "type": "string",
+                  "value": "ThickerHull"
+                },
+                {
+                  "type": "string",
+                  "value": "Nanomites"
+                },
+                {
+                  "type": "string",
+                  "value": "LargerThrusters"
+                },
+                {
+                  "type": "string",
+                  "value": "ExtraCargo"
+                }
+              ]
             }
           ],
           "effects": [],
@@ -1248,6 +1373,16 @@
                           "name": "TopLeft",
                           "x": 0,
                           "y": 0
+                        },
+                        {
+                          "name": "1/3",
+                          "x": 12,
+                          "y": 32
+                        },
+                        {
+                          "name": "3/3",
+                          "x": 52,
+                          "y": 32
                         }
                       ],
                       "originPoint": {
@@ -1475,34 +1610,6 @@
           }
         },
         {
-          "assetStoreId": "0afc2350902b780376c88111a4f3b03e4273d1ffe8e77239be4647e55ef35abd",
-          "name": "ROFUpgrade",
-          "persistentUuid": "96a5cffc-0166-4be3-88f8-35d083cb22fa",
-          "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "Small Light Grey Button",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "LabelText": "Improve Rate-of-Fire",
-            "PressedLabelOffsetY": 2
-          }
-        },
-        {
-          "assetStoreId": "0afc2350902b780376c88111a4f3b03e4273d1ffe8e77239be4647e55ef35abd",
-          "name": "SplittingShotsUpgrade",
-          "persistentUuid": "307ddeb4-75e0-4040-94c9-e0e020f0ad55",
-          "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "Small Light Grey Button",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "LabelText": "Bullets Split on Impact",
-            "PressedLabelOffsetY": 2
-          }
-        },
-        {
           "assetStoreId": "",
           "bold": false,
           "italic": false,
@@ -1645,6 +1752,168 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "persistentUuid": "8e8e06de-8a61-4654-86de-83d519ba2a66",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "UpgradeTitle",
+          "persistentUuid": "9269bc27-bd7e-445f-97ef-ab301a5520da",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "UpgradeTitle",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "UpgradeTitle",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "UpgradeText",
+          "persistentUuid": "9c50119b-8356-4a68-a4ae-cfe1f1205165",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "UpgradeText",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "UpgradeText",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "UpgradeBox",
+          "persistentUuid": "b0e22fe8-bf9c-478a-9c9e-e4771e127cd9",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite11",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 288,
+                            "y": 0
+                          },
+                          {
+                            "x": 288,
+                            "y": 512
+                          },
+                          {
+                            "x": 0,
+                            "y": 512
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1654,10 +1923,10 @@
             "objectName": "Player"
           },
           {
-            "objectName": "Background"
+            "objectName": "NewSprite"
           },
           {
-            "objectName": "SplittingShotsUpgrade"
+            "objectName": "Background"
           },
           {
             "objectName": "HealthBar"
@@ -1693,9 +1962,6 @@
             "objectName": "GameOver"
           },
           {
-            "objectName": "ROFUpgrade"
-          },
-          {
             "objectName": "WaveCounter"
           },
           {
@@ -1703,6 +1969,15 @@
           },
           {
             "objectName": "Enemy1"
+          },
+          {
+            "objectName": "UpgradeTitle"
+          },
+          {
+            "objectName": "UpgradeText"
+          },
+          {
+            "objectName": "UpgradeBox"
           }
         ]
       },
@@ -2286,6 +2561,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2399,6 +2675,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "AsteroidMovement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2531,6 +2808,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "EnemySpawning",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2692,7 +2970,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2782,26 +3059,11 @@
                     },
                     {
                       "type": {
-                        "value": "Create"
+                        "value": "ChangeTimeScale"
                       },
                       "parameters": [
                         "",
-                        "ROFUpgrade",
-                        "964",
-                        "540",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "SplittingShotsUpgrade",
-                        "764",
-                        "540",
-                        ""
+                        "0.01"
                       ]
                     }
                   ]
@@ -2884,97 +3146,6 @@
                     "Exp",
                     "=",
                     "Player.MaxExp"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
-                  },
-                  "parameters": [
-                    "ROFUpgrade",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "FireBullet::FireBullet::SetCooldownOp"
-                  },
-                  "parameters": [
-                    "Player",
-                    "FireBullet",
-                    "-",
-                    "0.3",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ROFUpgrade",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "SplittingShotsUpgrade",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
-                  },
-                  "parameters": [
-                    "SplittingShotsUpgrade",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ROFUpgrade",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "SplittingShotsUpgrade",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Bullet",
-                    "SplittingShots",
-                    "=",
-                    "1"
                   ]
                 }
               ]
@@ -3200,6 +3371,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3220,6 +3392,120 @@
                   ]
                 }
               ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Upgrades",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Exp",
+                    "=",
+                    "Player.MaxExp"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "RandUpgrade1",
+                    "=",
+                    "RandomInRange(0, VariableChildCount(UpgradeList) -1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "RandUpgrade2",
+                    "=",
+                    "RandomInRange(0, VariableChildCount(UpgradeList) -1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "RandUpgrade3",
+                    "=",
+                    "RandomInRange(0, VariableChildCount(UpgradeList) -1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "UpgradeBox",
+                    "SpawnArea.PointX(\"1/3\")",
+                    "SpawnArea.PointY(\"1/3\")",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "UpgradeBox",
+                    "SpawnArea.PointX(\"Center\")",
+                    "SpawnArea.PointY(\"Center\")",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "UpgradeBox",
+                    "SpawnArea.PointX(\"3/3\")",
+                    "SpawnArea.PointY(\"3/3\")",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ],
           "parameters": []
