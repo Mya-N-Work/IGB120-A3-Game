@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 266,
+    "build": 269,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,6 +18,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
+    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "SpaceMan - IGB120",
     "description": "",
@@ -418,7 +419,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2890516203134937,
+        "zoomFactor": 0.22169247275005313,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -475,8 +476,8 @@
           "opacity": 0,
           "persistentUuid": "6b85ff24-931a-4799-8c79-4514f3530bd6",
           "width": 1083,
-          "x": 382,
-          "y": -1,
+          "x": 387,
+          "y": -100,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -616,14 +617,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 2782,
+          "height": 2313,
           "keepRatio": true,
           "layer": "Background",
           "name": "Background",
           "persistentUuid": "dc27407a-e41d-4213-a6d7-4c404e7fe2e0",
           "width": 3171,
-          "x": -856,
-          "y": -338,
+          "x": -578,
+          "y": -506,
           "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
@@ -1376,13 +1377,13 @@
                         },
                         {
                           "name": "1/3",
-                          "x": 12,
-                          "y": 32
+                          "x": 8,
+                          "y": 24
                         },
                         {
                           "name": "3/3",
-                          "x": 52,
-                          "y": 32
+                          "x": 48,
+                          "y": 24
                         }
                       ],
                       "originPoint": {
@@ -1393,8 +1394,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 32,
-                        "y": 32
+                        "x": 28,
+                        "y": 24
                       },
                       "customCollisionMask": []
                     }
@@ -1876,7 +1877,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite11",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "UpgradeTitle",
+                          "x": 144,
+                          "y": 96
+                        },
+                        {
+                          "name": "UpgradeImage",
+                          "x": 144,
+                          "y": 200
+                        },
+                        {
+                          "name": "UpgradeDesc",
+                          "x": 144,
+                          "y": 350
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -3438,7 +3455,7 @@
                   },
                   "parameters": [
                     "Player",
-                    "RandUpgrade2",
+                    "RandUpgrade3",
                     "=",
                     "RandomInRange(0, VariableChildCount(UpgradeList) -1)"
                   ]
@@ -3449,7 +3466,7 @@
                   },
                   "parameters": [
                     "Player",
-                    "RandUpgrade3",
+                    "RandUpgrade2",
                     "=",
                     "RandomInRange(0, VariableChildCount(UpgradeList) -1)"
                   ]
@@ -3463,7 +3480,7 @@
                     "UpgradeBox",
                     "SpawnArea.PointX(\"1/3\")",
                     "SpawnArea.PointY(\"1/3\")",
-                    ""
+                    "\"UI\""
                   ]
                 },
                 {
@@ -3475,7 +3492,7 @@
                     "UpgradeBox",
                     "SpawnArea.PointX(\"Center\")",
                     "SpawnArea.PointY(\"Center\")",
-                    ""
+                    "\"UI\""
                   ]
                 },
                 {
@@ -3487,7 +3504,7 @@
                     "UpgradeBox",
                     "SpawnArea.PointX(\"3/3\")",
                     "SpawnArea.PointY(\"3/3\")",
-                    ""
+                    "\"UI\""
                   ]
                 }
               ]
