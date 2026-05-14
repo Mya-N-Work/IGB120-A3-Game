@@ -857,6 +857,11 @@
               "value": 1
             },
             {
+              "name": "ShotSpread",
+              "type": "number",
+              "value": 15
+            },
+            {
               "name": "ShotTimer",
               "type": "number",
               "value": 0
@@ -869,7 +874,7 @@
             {
               "name": "ShotRange",
               "type": "number",
-              "value": 700
+              "value": 800
             }
           ],
           "effects": [],
