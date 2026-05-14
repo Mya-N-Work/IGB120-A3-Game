@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 269,
+    "build": 266,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,7 +18,6 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
-    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "SpaceMan - IGB120",
     "description": "",
@@ -3665,7 +3664,7 @@
                     "Player",
                     "RandUpgrade1",
                     "=",
-                    "RandomInRange(0, 13)"
+                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
                   ]
                 },
                 {
@@ -3676,7 +3675,7 @@
                     "Player",
                     "RandUpgrade2",
                     "=",
-                    "RandomInRange(0, 13)"
+                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
                   ]
                 },
                 {
@@ -3687,7 +3686,7 @@
                     "Player",
                     "RandUpgrade3",
                     "=",
-                    "RandomInRange(0, 13)"
+                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
                   ]
                 },
                 {
@@ -3699,7 +3698,7 @@
                     "UpgradeBox1",
                     "(SceneWindowWidth() / 4) * 1",
                     "SceneWindowHeight()/2",
-                    ""
+                    "\"UI\""
                   ]
                 },
                 {
@@ -3711,7 +3710,7 @@
                     "UpgradeBox2",
                     "(SceneWindowWidth() / 4) * 2",
                     "SceneWindowHeight()/2",
-                    ""
+                    "\"UI\""
                   ]
                 },
                 {
@@ -3723,7 +3722,7 @@
                     "UpgradeBox3",
                     "(SceneWindowWidth() / 4) * 3",
                     "SceneWindowHeight()/2",
-                    ""
+                    "\"UI\""
                   ]
                 }
               ]
@@ -3779,6 +3778,57 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox1",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox2",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox3",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "UpgradeDisplay",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
                     "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
                   },
                   "parameters": [
@@ -3815,41 +3865,7 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox1",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox2",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox3",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                }
-              ]
+              "actions": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
