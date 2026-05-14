@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 269,
+    "build": 266,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,7 +18,6 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
-    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "SpaceMan - IGB120",
     "description": "",
@@ -343,7 +342,7 @@
       {
         "file": "assets/ship.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ship.png\"}",
         "name": "ship",
         "smoothed": false,
         "userAdded": false
@@ -387,6 +386,38 @@
         "name": "NewSprite11",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite12.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite12",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Laser.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Laser.png\"}",
+        "name": "Laser",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite13.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite13",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Laser2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Laser2",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -419,7 +450,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.22169247275005313,
+        "zoomFactor": 0.4598521426736366,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -433,6 +464,21 @@
         },
         {
           "name": "WaveNum",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ShotHitX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ShotHitY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ShotDist",
           "type": "number",
           "value": 0
         }
@@ -645,6 +691,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "DebugText",
+          "persistentUuid": "cf0e2fc0-9422-4e73-8662-c3b4a6b7e419",
+          "width": 0,
+          "x": 7,
+          "y": 18,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -788,6 +850,26 @@
                   "value": "ExtraCargo"
                 }
               ]
+            },
+            {
+              "name": "ShotNumber",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ShotTimer",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "ShotTimerMax",
+              "type": "number",
+              "value": 0.5
+            },
+            {
+              "name": "ShotRange",
+              "type": "number",
+              "value": 700
             }
           ],
           "effects": [],
@@ -1931,6 +2013,149 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite2",
+          "persistentUuid": "45fc36b3-3eeb-44ff-97ab-ad771ae0472a",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "DebugText",
+          "persistentUuid": "eef65025-b44d-4429-aae1-484e2b05a711",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Debug",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 60,
+          "color": {
+            "b": 240,
+            "g": 0,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Debug",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "lineHeight": 0,
+            "color": "255;0;240"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Laser",
+          "persistentUuid": "63f2a2bf-4167-4851-95e7-bec744869bde",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Laser",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Laser2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 1,
+                            "y": 10
+                          },
+                          {
+                            "x": 0,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "NewShapePainter",
+          "persistentUuid": "70c803dc-78f6-4f39-bce3-3e2ebb2abb4b",
+          "type": "PrimitiveDrawing::Drawer",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "fillOpacity": 255,
+          "outlineSize": 1,
+          "outlineOpacity": 255,
+          "absoluteCoordinates": false,
+          "clearBetweenFrames": true,
+          "antialiasing": "none",
+          "fillColor": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "outlineColor": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1938,6 +2163,18 @@
         "children": [
           {
             "objectName": "Player"
+          },
+          {
+            "objectName": "Laser"
+          },
+          {
+            "objectName": "NewShapePainter"
+          },
+          {
+            "objectName": "NewSprite2"
+          },
+          {
+            "objectName": "DebugText"
           },
           {
             "objectName": "NewSprite"
@@ -2004,7 +2241,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2176,6 +2412,11 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ],
           "parameters": []
@@ -2185,11 +2426,74 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "ShotTimer",
+                    "-",
+                    "TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Laser",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Laser",
+                    "Opacity",
+                    "-",
+                    "10"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::Value"
+                      },
+                      "parameters": [
+                        "Laser",
+                        "Opacity",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Laser",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -2201,22 +2505,118 @@
                     "",
                     "\"Left\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "ShotTimer",
+                    "<=",
+                    "0"
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "FireBullet::FireBullet::Fire"
+                    "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
                     "Player",
-                    "FireBullet",
+                    "ShotTimer",
+                    "=",
+                    "Player.ShotTimerMax"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Laser",
                     "Player.PointX(\"Gun\")",
                     "Player.PointY(\"Gun\")",
-                    "Bullet",
-                    "Player.Angle()",
-                    "1000",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "Laser",
+                    "=",
+                    "Player.Angle()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetX"
+                  },
+                  "parameters": [
+                    "Laser",
+                    "Scale",
+                    "=",
+                    "Player.ShotRange"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Raycast"
+                      },
+                      "parameters": [
+                        "MediumA1",
+                        "Player.PointX(\"Gun\")",
+                        "Player.PointY(\"Gun\")",
+                        "Player.Angle()",
+                        "Player.ShotRange",
+                        "ShotHitX",
+                        "ShotHitY",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ShotDist",
+                        "=",
+                        "sqrt(pow(Player.PointX(\"Gun\") - ShotHitX, 2) + pow(Player.PointY(\"Gun\") - ShotHitY, 2))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "DebugText",
+                        "Text",
+                        "=",
+                        "ShotDist"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetX"
+                      },
+                      "parameters": [
+                        "Laser",
+                        "Scale",
+                        "=",
+                        "ShotDist"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2276,8 +2676,8 @@
                       "parameters": [
                         "",
                         "SmallA1",
-                        "MediumA1.X() + RandomInRange(1,10)",
-                        "MediumA1.Y() + RandomInRange(1,10)",
+                        "MediumA1.X() + RandomInRange(1, 10)",
+                        "MediumA1.Y() + RandomInRange(1, 10)",
                         ""
                       ]
                     },
@@ -2288,8 +2688,8 @@
                       "parameters": [
                         "",
                         "SmallA1",
-                        "MediumA1.X() + RandomInRange(1,10)",
-                        "MediumA1.Y() + RandomInRange(1,10)",
+                        "MediumA1.X() + RandomInRange(1, 10)",
+                        "MediumA1.Y() + RandomInRange(1, 10)",
                         ""
                       ]
                     },
@@ -2578,7 +2978,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2692,7 +3091,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "AsteroidMovement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3418,6 +3816,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "name": "Upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3715,10 +4114,6 @@
         {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
-        },
-        {
-          "name": "FireBullet",
-          "type": "FireBullet::FireBullet"
         },
         {
           "name": "Flippable",
