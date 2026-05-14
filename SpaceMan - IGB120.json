@@ -342,7 +342,7 @@
       {
         "file": "assets/ship.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ship.png\"}",
+        "metadata": "{\"extension\":\".png\"}",
         "name": "ship",
         "smoothed": false,
         "userAdded": false
@@ -396,14 +396,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/Laser.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Laser.png\"}",
-        "name": "Laser",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/NewSprite13.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -412,12 +404,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/Laser2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Laser2",
-        "smoothed": false,
-        "userAdded": false
         "file": "assets/Transparent Button With White Blue Border_Hovered.png",
         "kind": "image",
         "metadata": "",
@@ -495,7 +481,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4598521426736366,
+        "zoomFactor": 0.430340380220769,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -509,21 +495,6 @@
         },
         {
           "name": "WaveNum",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ShotHitX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ShotHitY",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ShotDist",
           "type": "number",
           "value": 0
         }
@@ -720,38 +691,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "UpgradeBox",
-          "persistentUuid": "6f30fe6b-92cd-4382-984f-b34fb70d05af",
-          "width": 0,
-          "x": -1228,
-          "y": 1859,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "DebugText",
-          "persistentUuid": "cf0e2fc0-9422-4e73-8662-c3b4a6b7e419",
-          "width": 0,
-          "x": 7,
-          "y": 18,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -894,35 +833,40 @@
                   "value": "Extra Cargo"
                 }
               ]
-            },
-            {
-              "name": "ShotNumber",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "name": "ShotSpread",
-              "type": "number",
-              "value": 15
-            },
-            {
-              "name": "ShotTimer",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "ShotTimerMax",
-              "type": "number",
-              "value": 0.5
-            },
-            {
-              "name": "ShotRange",
-              "type": "number",
-              "value": 800
             }
           ],
           "effects": [],
           "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.4,
+              "HasJustFired": false,
+              "RotateBullet": true,
+              "FiringArc": 5,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "BulletSpeedVariance": 0,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 0,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0,
+              "ExponentialCoolingRate": 0,
+              "BulletLayer": "",
+              "RandomizedAngle": 0
+            },
             {
               "isFolded": true,
               "name": "ObjectSpawner",
@@ -1967,105 +1911,13 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite2",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite11",
-                      "points": [
-                        {
-                          "name": "UpgradeTitle",
-                          "x": 144,
-                          "y": 96
-                        },
-                        {
-                          "name": "UpgradeImage",
-                          "x": 144,
-                          "y": 200
-                        },
-                        {
-                          "name": "UpgradeDesc",
-                          "x": 144,
-                          "y": 350
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 288,
-                            "y": 0
-                          },
-                          {
-                            "x": 288,
-                            "y": 512
-                          },
-                          {
-                            "x": 0,
-                            "y": 512
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "NewSprite2",
-          "persistentUuid": "45fc36b3-3eeb-44ff-97ab-ad771ae0472a",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": []
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DebugText",
-          "persistentUuid": "eef65025-b44d-4429-aae1-484e2b05a711",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Debug",
+          "string": "UpgradeTitle",
           "font": "",
-          "textAlignment": "left",
-          "characterSize": 60,
+          "textAlignment": "center",
+          "characterSize": 25,
           "color": {
-            "b": 240,
-            "g": 0,
+            "b": 255,
+            "g": 255,
             "r": 255
           },
           "content": {
@@ -2288,18 +2140,6 @@
             "objectName": "Player"
           },
           {
-            "objectName": "Laser"
-          },
-          {
-            "objectName": "NewShapePainter"
-          },
-          {
-            "objectName": "NewSprite2"
-          },
-          {
-            "objectName": "DebugText"
-          },
-          {
             "objectName": "NewSprite"
           },
           {
@@ -2382,6 +2222,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2553,11 +2394,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             }
           ],
           "parameters": []
@@ -2567,74 +2403,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "ShotTimer",
-                    "-",
-                    "TimeDelta()"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "Laser",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "OpacityCapability::OpacityBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Laser",
-                    "Opacity",
-                    "-",
-                    "10"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "OpacityCapability::OpacityBehavior::Value"
-                      },
-                      "parameters": [
-                        "Laser",
-                        "Opacity",
-                        "<=",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Laser",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -2646,118 +2419,22 @@
                     "",
                     "\"Left\""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "ShotTimer",
-                    "<=",
-                    "0"
-                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "FireBullet::FireBullet::Fire"
                   },
                   "parameters": [
                     "Player",
-                    "ShotTimer",
-                    "=",
-                    "Player.ShotTimerMax"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Laser",
+                    "FireBullet",
                     "Player.PointX(\"Gun\")",
                     "Player.PointY(\"Gun\")",
+                    "Bullet",
+                    "Player.Angle()",
+                    "1000",
                     ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetAngle"
-                  },
-                  "parameters": [
-                    "Laser",
-                    "=",
-                    "Player.Angle()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetX"
-                  },
-                  "parameters": [
-                    "Laser",
-                    "Scale",
-                    "=",
-                    "Player.ShotRange"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Raycast"
-                      },
-                      "parameters": [
-                        "MediumA1",
-                        "Player.PointX(\"Gun\")",
-                        "Player.PointY(\"Gun\")",
-                        "Player.Angle()",
-                        "Player.ShotRange",
-                        "ShotHitX",
-                        "ShotHitY",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "ShotDist",
-                        "=",
-                        "sqrt(pow(Player.PointX(\"Gun\") - ShotHitX, 2) + pow(Player.PointY(\"Gun\") - ShotHitY, 2))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "DebugText",
-                        "Text",
-                        "=",
-                        "ShotDist"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetX"
-                      },
-                      "parameters": [
-                        "Laser",
-                        "Scale",
-                        "=",
-                        "ShotDist"
-                      ]
-                    }
                   ]
                 }
               ]
@@ -2817,8 +2494,8 @@
                       "parameters": [
                         "",
                         "SmallA1",
-                        "MediumA1.X() + RandomInRange(1, 10)",
-                        "MediumA1.Y() + RandomInRange(1, 10)",
+                        "MediumA1.X() + RandomInRange(1,10)",
+                        "MediumA1.Y() + RandomInRange(1,10)",
                         ""
                       ]
                     },
@@ -2829,8 +2506,8 @@
                       "parameters": [
                         "",
                         "SmallA1",
-                        "MediumA1.X() + RandomInRange(1, 10)",
-                        "MediumA1.Y() + RandomInRange(1, 10)",
+                        "MediumA1.X() + RandomInRange(1,10)",
+                        "MediumA1.Y() + RandomInRange(1,10)",
                         ""
                       ]
                     },
@@ -3119,6 +2796,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3232,6 +2910,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "AsteroidMovement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3957,7 +3636,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "disabled": true,
           "name": "Upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3986,7 +3664,7 @@
                     "Player",
                     "RandUpgrade1",
                     "=",
-                    "RandomInRange(0, 13)"
+                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
                   ]
                 },
                 {
@@ -3997,7 +3675,7 @@
                     "Player",
                     "RandUpgrade2",
                     "=",
-                    "RandomInRange(0, 13)"
+                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
                   ]
                 },
                 {
@@ -4008,7 +3686,7 @@
                     "Player",
                     "RandUpgrade3",
                     "=",
-                    "RandomInRange(0, 13)"
+                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
                   ]
                 },
                 {
@@ -4020,7 +3698,7 @@
                     "UpgradeBox1",
                     "(SceneWindowWidth() / 4) * 1",
                     "SceneWindowHeight()/2",
-                    ""
+                    "\"UI\""
                   ]
                 },
                 {
@@ -4032,7 +3710,7 @@
                     "UpgradeBox2",
                     "(SceneWindowWidth() / 4) * 2",
                     "SceneWindowHeight()/2",
-                    ""
+                    "\"UI\""
                   ]
                 },
                 {
@@ -4044,7 +3722,46 @@
                     "UpgradeBox3",
                     "(SceneWindowWidth() / 4) * 3",
                     "SceneWindowHeight()/2",
-                    ""
+                    "\"UI\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox1",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox2",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox3",
+                    "Resizable",
+                    "=",
+                    "300"
                   ]
                 }
               ]
@@ -4103,41 +3820,7 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox1",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox2",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox3",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                }
-              ]
+              "actions": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -4155,18 +3838,7 @@
           "name": "UpgradeCode",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            }
-          ],
+          "events": [],
           "parameters": []
         }
       ],
@@ -4357,6 +4029,10 @@
         {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
         },
         {
           "name": "Flippable",
