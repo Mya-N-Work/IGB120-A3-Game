@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 266,
+    "build": 269,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,6 +18,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
+    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "SpaceMan - IGB120",
     "description": "",
@@ -3664,7 +3665,7 @@
                     "Player",
                     "RandUpgrade1",
                     "=",
-                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
+                    "RandomInRange(0, 13)"
                   ]
                 },
                 {
@@ -3675,7 +3676,7 @@
                     "Player",
                     "RandUpgrade2",
                     "=",
-                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
+                    "RandomInRange(0, 13)"
                   ]
                 },
                 {
@@ -3686,7 +3687,7 @@
                     "Player",
                     "RandUpgrade3",
                     "=",
-                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
+                    "RandomInRange(0, 13)"
                   ]
                 },
                 {
@@ -3698,7 +3699,7 @@
                     "UpgradeBox1",
                     "(SceneWindowWidth() / 4) * 1",
                     "SceneWindowHeight()/2",
-                    "\"UI\""
+                    ""
                   ]
                 },
                 {
@@ -3710,7 +3711,7 @@
                     "UpgradeBox2",
                     "(SceneWindowWidth() / 4) * 2",
                     "SceneWindowHeight()/2",
-                    "\"UI\""
+                    ""
                   ]
                 },
                 {
@@ -3722,46 +3723,7 @@
                     "UpgradeBox3",
                     "(SceneWindowWidth() / 4) * 3",
                     "SceneWindowHeight()/2",
-                    "\"UI\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox1",
-                    "Resizable",
-                    "=",
-                    "400"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox2",
-                    "Resizable",
-                    "=",
-                    "400"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox3",
-                    "Resizable",
-                    "=",
-                    "400"
+                    ""
                   ]
                 }
               ]
@@ -3820,7 +3782,41 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox1",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox2",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "UpgradeBox3",
+                    "Resizable",
+                    "=",
+                    "300"
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -3838,7 +3834,18 @@
           "name": "UpgradeCode",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
           "parameters": []
         }
       ],
