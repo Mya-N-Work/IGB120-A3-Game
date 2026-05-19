@@ -3486,7 +3486,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Health/Damage",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3526,6 +3525,35 @@
                     "800",
                     "400",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "Player.MaxHealth"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "=",
+                    "Player.MaxHealth"
                   ]
                 }
               ]
@@ -3911,7 +3939,7 @@
                   "parameters": [
                     "UpgradeBox1",
                     "=",
-                    "",
+                    "Player.UpgradeList[RandUpgrade1]",
                     ""
                   ]
                 },
@@ -3922,7 +3950,7 @@
                   "parameters": [
                     "UpgradeBox2",
                     "=",
-                    "",
+                    "Player.UpgradeList[RandUpgrade2]",
                     ""
                   ]
                 },
@@ -3933,7 +3961,7 @@
                   "parameters": [
                     "UpgradeBox3",
                     "=",
-                    "",
+                    "Player.UpgradeList[RandUpgrade3]",
                     ""
                   ]
                 }
