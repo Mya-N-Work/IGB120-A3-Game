@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 266,
+    "build": 269,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,6 +18,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
+    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "SpaceMan - IGB120",
     "description": "",
@@ -457,7 +458,50 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "TempChoices",
+      "type": "array",
+      "children": []
+    },
+    {
+      "name": "UpgradePool",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "Damage"
+        },
+        {
+          "type": "string",
+          "value": "Health"
+        },
+        {
+          "type": "string",
+          "value": "Firerate"
+        },
+        {
+          "type": "string",
+          "value": "Speed"
+        }
+      ]
+    },
+    {
+      "name": "RandUpgrade1",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "RandUpgrade2",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "RandUpgrade3",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
     {
       "b": 63,
@@ -481,7 +525,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.430340380220769,
+        "zoomFactor": 0.2368956372544676,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -497,6 +541,16 @@
           "name": "WaveNum",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "TempChoices",
+          "type": "array",
+          "children": []
+        },
+        {
+          "name": "UpgradePool",
+          "type": "array",
+          "children": []
         }
       ],
       "instances": [
@@ -691,6 +745,54 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "UpgradeBox1",
+          "persistentUuid": "38acaaa1-3743-405d-997f-7d8578bec69a",
+          "width": 0,
+          "x": -1242,
+          "y": 1971,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "UpgradeBox2",
+          "persistentUuid": "948ca2a4-52d7-45fe-a1d7-1efacd1da720",
+          "width": 0,
+          "x": -1255,
+          "y": 2110,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "UpgradeBox3",
+          "persistentUuid": "9957acc2-fd68-4e77-80ea-d973201c48df",
+          "width": 0,
+          "x": -1272,
+          "y": 2229,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -758,21 +860,7 @@
               "value": 0
             },
             {
-              "name": "RandUpgrade1",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "RandUpgrade2",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "RandUpgrade3",
-              "type": "number",
-              "value": 0
-            },
-            {
+              "folded": true,
               "name": "UpgradeList",
               "type": "array",
               "children": [
@@ -3398,7 +3486,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Health/Damage",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3438,6 +3525,35 @@
                     "800",
                     "400",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "Player.MaxHealth"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "=",
+                    "Player.MaxHealth"
                   ]
                 }
               ]
@@ -3650,79 +3766,203 @@
                   "parameters": [
                     "Player",
                     "Exp",
-                    "=",
+                    ">=",
                     "Player.MaxExp"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "UpgradeBox1",
+                        "SceneWindowWidth()/2 - 350",
+                        "SceneWindowHeight()/2",
+                        "\"UI\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "UpgradeBox2",
+                        "SceneWindowWidth()/2",
+                        "SceneWindowHeight()/2",
+                        "\"UI\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "UpgradeBox3",
+                        "SceneWindowWidth()/2 + 350",
+                        "SceneWindowHeight()/2",
+                        "\"UI\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Player",
                     "RandUpgrade1",
                     "=",
-                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
+                    "RandomInRange(1,13)"
                   ]
                 },
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Player",
                     "RandUpgrade2",
                     "=",
-                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
+                    "RandomInRange(1,13)"
                   ]
                 },
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Player",
                     "RandUpgrade3",
                     "=",
-                    "RandomInRange(0, VariableChildCount(Player.UpgradeList) -1)"
+                    "RandomInRange(1,13)"
                   ]
-                },
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "UpgradeDisplay",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
                 {
                   "type": {
-                    "value": "Create"
+                    "value": "SetXY"
                   },
                   "parameters": [
-                    "",
                     "UpgradeBox1",
-                    "(SceneWindowWidth() / 4) * 1",
-                    "SceneWindowHeight()/2",
-                    "\"UI\""
+                    "=",
+                    "SceneWindowWidth()/2 - 350",
+                    "=",
+                    "SceneWindowHeight()/2"
                   ]
                 },
                 {
                   "type": {
-                    "value": "Create"
+                    "value": "SetXY"
                   },
                   "parameters": [
-                    "",
                     "UpgradeBox2",
-                    "(SceneWindowWidth() / 4) * 2",
-                    "SceneWindowHeight()/2",
-                    "\"UI\""
+                    "=",
+                    "SceneWindowWidth()/2",
+                    "=",
+                    "SceneWindowHeight()/2"
                   ]
                 },
                 {
                   "type": {
-                    "value": "Create"
+                    "value": "SetXY"
                   },
                   "parameters": [
-                    "",
                     "UpgradeBox3",
-                    "(SceneWindowWidth() / 4) * 3",
-                    "SceneWindowHeight()/2",
-                    "\"UI\""
+                    "=",
+                    "SceneWindowWidth()/2 + 350",
+                    "=",
+                    "SceneWindowHeight()/2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                  },
+                  "parameters": [
+                    "UpgradeBox1",
+                    "=",
+                    "Player.UpgradeList[RandUpgrade1]",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                  },
+                  "parameters": [
+                    "UpgradeBox2",
+                    "=",
+                    "Player.UpgradeList[RandUpgrade2]",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                  },
+                  "parameters": [
+                    "UpgradeBox3",
+                    "=",
+                    "Player.UpgradeList[RandUpgrade3]",
+                    ""
                   ]
                 }
               ]
@@ -3738,7 +3978,50 @@
                     "UpgradeBox1",
                     ""
                   ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
                 },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "UpgradeBox1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "UpgradeBox2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "UpgradeBox3",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
@@ -3747,7 +4030,50 @@
                     "UpgradeBox2",
                     ""
                   ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
                 },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "UpgradeBox1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "UpgradeBox2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "UpgradeBox3",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
@@ -3758,114 +4084,44 @@
                   ]
                 }
               ],
-              "actions": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "UpgradeDisplay",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                    "value": "ChangeTimeScale"
                   },
                   "parameters": [
-                    "UpgradeBox1",
-                    "Resizable",
-                    "=",
-                    "300"
+                    "",
+                    "1"
                   ]
                 },
                 {
                   "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox2",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox3",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "UpgradeDisplay",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                    "value": "Delete"
                   },
                   "parameters": [
                     "UpgradeBox1",
-                    "=",
-                    "Player.UpgradeList[Player.RandUpgrade1]",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                    "value": "Delete"
                   },
                   "parameters": [
                     "UpgradeBox2",
-                    "=",
-                    "Player.UpgradeList[Player.RandUpgrade2]",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                    "value": "Delete"
                   },
                   "parameters": [
                     "UpgradeBox3",
-                    "=",
-                    "Player.UpgradeList[Player.RandUpgrade3]",
                     ""
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -3885,9 +4141,183 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "HealthUpgrade"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "MaxHealth",
+                    "*",
+                    "1.3"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "RegenUpgrade"
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "+",
+                    "0.5"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "SpeedUpgrade"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Acceleration",
+                    "*",
+                    "1.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "MaxSpeed",
+                    "*",
+                    "1.2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "FireRateUpgrade"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::SetCooldownOp"
+                  },
+                  "parameters": [
+                    "Player",
+                    "FireBullet",
+                    "-",
+                    "0.2",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "SplitShotUpgrade"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::SetBulletQuantityOp"
+                  },
+                  "parameters": [
+                    "Player",
+                    "FireBullet",
+                    "=",
+                    "3",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
