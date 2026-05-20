@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 266,
+    "build": 269,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,6 +18,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
+    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "SpaceMan - IGB120",
     "description": "",
@@ -481,7 +482,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.430340380220769,
+        "zoomFactor": 0.3645833333333366,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1728,9 +1729,29 @@
           "updateIfNotVisible": false,
           "variables": [
             {
-              "name": "Health",
+              "name": "enemyOneHealth",
               "type": "number",
-              "value": 0
+              "value": 50
+            },
+            {
+              "name": "enemyOneDamage",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "enemyOneFireRate",
+              "type": "number",
+              "value": 0.5
+            },
+            {
+              "name": "enemyOneSpeed",
+              "type": "number",
+              "value": 200
+            },
+            {
+              "name": "enemyOneXP",
+              "type": "number",
+              "value": 10
             }
           ],
           "effects": [],
@@ -2440,6 +2461,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2527,6 +2549,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2677,6 +2700,86 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "Enemy1",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "enemyOneHealth",
+                    "-",
+                    "10"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        "enemyOneHealth",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3205,6 +3308,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3606,7 +3710,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3622,7 +3725,7 @@
                   "parameters": [
                     "Enemy1",
                     "Player",
-                    "100",
+                    "Enemy1.enemyOneSpeed",
                     ""
                   ]
                 }
@@ -3636,6 +3739,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3768,6 +3872,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "UpgradeDisplay",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3819,6 +3924,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "UpgradeDisplay",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3880,6 +3986,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "UpgradeCode",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
