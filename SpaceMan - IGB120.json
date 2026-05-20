@@ -2152,6 +2152,285 @@
             "HoveredFadeOutDuration": 0,
             "LabelText": "Button"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Enemy2",
+          "persistentUuid": "209ebf91-01e7-4418-9307-fdf53ebece3a",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "enemyTwoHealth",
+              "persistentUuid": "a83b9b64-ce55-4d91-b42e-1543ed826975",
+              "type": "number",
+              "value": 150
+            },
+            {
+              "name": "enemyTwoDamage",
+              "persistentUuid": "dd01d948-09cd-450a-822d-acc64da1ecc7",
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "enemyTwoFireRate",
+              "persistentUuid": "740a71b9-5ae8-4083-b3d3-1083dbd2fc5f",
+              "type": "number",
+              "value": 0.3
+            },
+            {
+              "name": "enemyTwoSpeed",
+              "persistentUuid": "9c941e36-dcc2-4c74-b0dd-0cc5876d2845",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "name": "enemyTwoXP",
+              "persistentUuid": "a59c5f39-a270-446a-ac6c-2567288fe7c9",
+              "type": "number",
+              "value": 20
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite7",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Enemy3",
+          "persistentUuid": "40dc1f7c-711b-45bb-95c9-1e5d670a4a81",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "enemyThreeHealth",
+              "persistentUuid": "e7757eb5-0a8a-45ed-bb07-ba7c55765083",
+              "type": "number",
+              "value": 25
+            },
+            {
+              "name": "enemyThreeDamage",
+              "persistentUuid": "8657e64f-ff4f-42ea-b3cc-c08c384ff098",
+              "type": "number",
+              "value": 20
+            },
+            {
+              "name": "enemyThreeFireRate",
+              "persistentUuid": "cc66f6dc-e0bb-4c11-b5c4-731c8e686cba",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "enemyThreeSpeed",
+              "persistentUuid": "4676b6f3-4b35-4878-b331-019d75255c7e",
+              "type": "number",
+              "value": 300
+            },
+            {
+              "name": "enemyThreeXP",
+              "persistentUuid": "3e2de5d2-789e-49d3-9752-f71cbf219466",
+              "type": "number",
+              "value": 5
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite7",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Enemy4",
+          "persistentUuid": "d93a8f9f-fcfd-481e-bfb9-adf6783fcf6a",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "enemyFourHealth",
+              "persistentUuid": "4c605d38-96b2-4583-bace-e8db033e05d1",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "name": "enemyFourDamage",
+              "persistentUuid": "4a00fd23-12f0-4776-b5a5-4b738d7365ea",
+              "type": "number",
+              "value": 15
+            },
+            {
+              "name": "enemyFourFireRate",
+              "persistentUuid": "b0f6d22a-fb34-4c34-984a-051c18a7d318",
+              "type": "number",
+              "value": 0.5
+            },
+            {
+              "name": "enemyFourSpeed",
+              "persistentUuid": "04aa0c4b-efc6-40fe-8fda-29d4b675df10",
+              "type": "number",
+              "value": 150
+            },
+            {
+              "name": "enemyFourXP",
+              "persistentUuid": "455b3f8a-1b3f-4e88-8414-94d425a5730e",
+              "type": "number",
+              "value": 15
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite7",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2207,6 +2486,15 @@
           },
           {
             "objectName": "Enemy1"
+          },
+          {
+            "objectName": "Enemy2"
+          },
+          {
+            "objectName": "Enemy3"
+          },
+          {
+            "objectName": "Enemy4"
           },
           {
             "objectName": "UpgradeTitle1"
