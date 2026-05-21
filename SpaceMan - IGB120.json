@@ -311,7 +311,7 @@
       {
         "file": "assets/NewSprite7.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite7.png\"}",
         "name": "NewSprite7",
         "smoothed": false,
         "userAdded": false
@@ -450,6 +450,46 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/5e2e3fcc57885d5e510934e621be5f8dd7a5b6425cf46ef38073e3d2c3b04048_Kenney Mini Square.ttf",
           "name": "Kenney Mini Square.ttf"
         }
+      },
+      {
+        "file": "assets/Enemy2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Enemy3.png\"}",
+        "name": "Enemy3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy1.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy1",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy1Bullet.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy1Bullet",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy2Bullet.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy2Bullet",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -1755,10 +1795,41 @@
             }
           ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.5,
+              "HasJustFired": false,
+              "RotateBullet": true,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "BulletSpeedVariance": 0,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 1,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0
+            }
+          ],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "Enemy1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1768,8 +1839,14 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite7",
-                      "points": [],
+                      "image": "Enemy1",
+                      "points": [
+                        {
+                          "name": "Enemy1Gun",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -2163,31 +2240,26 @@
           "variables": [
             {
               "name": "enemyTwoHealth",
-              "persistentUuid": "a83b9b64-ce55-4d91-b42e-1543ed826975",
               "type": "number",
               "value": 150
             },
             {
               "name": "enemyTwoDamage",
-              "persistentUuid": "dd01d948-09cd-450a-822d-acc64da1ecc7",
               "type": "number",
               "value": 5
             },
             {
               "name": "enemyTwoFireRate",
-              "persistentUuid": "740a71b9-5ae8-4083-b3d3-1083dbd2fc5f",
               "type": "number",
               "value": 0.3
             },
             {
               "name": "enemyTwoSpeed",
-              "persistentUuid": "9c941e36-dcc2-4c74-b0dd-0cc5876d2845",
               "type": "number",
               "value": 100
             },
             {
               "name": "enemyTwoXP",
-              "persistentUuid": "a59c5f39-a270-446a-ac6c-2567288fe7c9",
               "type": "number",
               "value": 20
             }
@@ -2196,7 +2268,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "Enemy2",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -2206,7 +2278,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite7",
+                      "image": "Enemy2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2256,33 +2328,116 @@
           "variables": [
             {
               "name": "enemyThreeHealth",
-              "persistentUuid": "e7757eb5-0a8a-45ed-bb07-ba7c55765083",
               "type": "number",
               "value": 25
             },
             {
               "name": "enemyThreeDamage",
-              "persistentUuid": "8657e64f-ff4f-42ea-b3cc-c08c384ff098",
               "type": "number",
               "value": 20
             },
             {
               "name": "enemyThreeFireRate",
-              "persistentUuid": "cc66f6dc-e0bb-4c11-b5c4-731c8e686cba",
               "type": "number",
               "value": 1
             },
             {
               "name": "enemyThreeSpeed",
-              "persistentUuid": "4676b6f3-4b35-4878-b331-019d75255c7e",
               "type": "number",
-              "value": 300
+              "value": 250
             },
             {
               "name": "enemyThreeXP",
-              "persistentUuid": "3e2de5d2-789e-49d3-9752-f71cbf219466",
               "type": "number",
               "value": 5
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Enemy3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Enemy4",
+          "persistentUuid": "d93a8f9f-fcfd-481e-bfb9-adf6783fcf6a",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "enemyFourHealth",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "name": "enemyFourDamage",
+              "type": "number",
+              "value": 15
+            },
+            {
+              "name": "enemyFourFireRate",
+              "type": "number",
+              "value": 0.5
+            },
+            {
+              "name": "enemyFourSpeed",
+              "type": "number",
+              "value": 150
+            },
+            {
+              "name": "enemyFourXP",
+              "type": "number",
+              "value": 15
             }
           ],
           "effects": [],
@@ -2342,47 +2497,27 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Enemy4",
-          "persistentUuid": "d93a8f9f-fcfd-481e-bfb9-adf6783fcf6a",
+          "name": "Enemy1Bullet",
+          "persistentUuid": "2314bb9e-617c-42a1-a2c0-785f53dddc78",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
             {
-              "name": "enemyFourHealth",
-              "persistentUuid": "4c605d38-96b2-4583-bace-e8db033e05d1",
+              "name": "SplittingShots",
               "type": "number",
-              "value": 100
+              "value": 0
             },
             {
-              "name": "enemyFourDamage",
-              "persistentUuid": "4a00fd23-12f0-4776-b5a5-4b738d7365ea",
+              "name": "NumSplits",
               "type": "number",
-              "value": 15
-            },
-            {
-              "name": "enemyFourFireRate",
-              "persistentUuid": "b0f6d22a-fb34-4c34-984a-051c18a7d318",
-              "type": "number",
-              "value": 0.5
-            },
-            {
-              "name": "enemyFourSpeed",
-              "persistentUuid": "04aa0c4b-efc6-40fe-8fda-29d4b675df10",
-              "type": "number",
-              "value": 150
-            },
-            {
-              "name": "enemyFourXP",
-              "persistentUuid": "455b3f8a-1b3f-4e88-8414-94d425a5730e",
-              "type": "number",
-              "value": 15
+              "value": 0
             }
           ],
           "effects": [],
           "behaviors": [],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "Enemy1Bullet",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -2392,7 +2527,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite7",
+                      "image": "Enemy1Bullet",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2412,16 +2547,89 @@
                             "y": 0
                           },
                           {
-                            "x": 64,
+                            "x": 15,
                             "y": 0
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 15,
+                            "y": 6
                           },
                           {
                             "x": 0,
-                            "y": 64
+                            "y": 6
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Enemy3Bullet",
+          "persistentUuid": "1e8bd610-54b3-49f1-b335-2acca7dbfee7",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "SplittingShots",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "NumSplits",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Enemy3Bullet",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy2Bullet",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 15,
+                            "y": 0
+                          },
+                          {
+                            "x": 15,
+                            "y": 6
+                          },
+                          {
+                            "x": 0,
+                            "y": 6
                           }
                         ]
                       ]
@@ -2453,6 +2661,12 @@
           },
           {
             "objectName": "Bullet"
+          },
+          {
+            "objectName": "Enemy1Bullet"
+          },
+          {
+            "objectName": "Enemy3Bullet"
           },
           {
             "objectName": "MediumA1"
@@ -2712,7 +2926,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2988,6 +3201,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3021,7 +3235,7 @@
                     "Enemy1",
                     "enemyOneHealth",
                     "-",
-                    "10"
+                    "20"
                   ]
                 }
               ],
@@ -3060,6 +3274,246 @@
                         "Exp",
                         "+",
                         "10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "Enemy2",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "enemyTwoHealth",
+                    "-",
+                    "20"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "enemyTwoHealth",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "+",
+                        "20"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "Enemy3",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "enemyThreeHealth",
+                    "-",
+                    "20"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "enemyThreeHealth",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "+",
+                        "5"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "Enemy4",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy4",
+                    "enemyFourHealth",
+                    "-",
+                    "20"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy4",
+                        "enemyFourHealth",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Enemy4",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "+",
+                        "5"
                       ]
                     }
                   ]
@@ -3187,7 +3641,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3291,6 +3744,122 @@
                     "SpawnArea",
                     "ObjectSpawner",
                     "LargeA1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "Enemy1",
+                    "<",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "Enemy2",
+                    "<",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy2",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "Enemy3",
+                    "<",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy3",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "MediumA1",
+                    "Enemy4",
+                    "<",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy4",
                     ""
                   ]
                 }
@@ -3690,7 +4259,7 @@
                       },
                       "parameters": [
                         "",
-                        "0.01"
+                        "1"
                       ]
                     }
                   ]
@@ -3790,7 +4359,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Health/Damage",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3967,6 +4535,162 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy4",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy4",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -4016,6 +4740,60 @@
                     "Enemy1.enemyOneSpeed",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceTowardObject"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Player",
+                    "Enemy2.enemyTwoSpeed",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceTowardObject"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "Player",
+                    "Enemy3.enemyThreeSpeed",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceTowardObject"
+                  },
+                  "parameters": [
+                    "Enemy4",
+                    "Player",
+                    "Enemy4.enemyFourSpeed",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::Fire"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "FireBullet",
+                    "Enemy1.PointX(\"Enemy1Gun\")",
+                    "Enemy1.PointY(\"Enemy1Gun\")",
+                    "Enemy1Bullet",
+                    "Player.Sprite()",
+                    "1000",
+                    ""
+                  ]
                 }
               ]
             }
@@ -4027,7 +4805,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
