@@ -525,7 +525,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.1348047153573469,
+        "zoomFactor": 0.13935037485556942,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -745,54 +745,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "UpgradeBox1",
-          "persistentUuid": "36856409-e254-47f2-ba93-4f53902a1710",
-          "width": 0,
-          "x": -246,
-          "y": 2216,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "UpgradeBox2",
-          "persistentUuid": "7ca6ce4e-6e39-44af-a3bc-8bd3d17e1c2d",
-          "width": 0,
-          "x": -132,
-          "y": 2427,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "UpgradeBox3",
-          "persistentUuid": "74a4dc1d-8cb9-4def-af0b-3551928f6288",
-          "width": 0,
-          "x": -230,
-          "y": 2638,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -904,11 +856,6 @@
                   "value": "Larger Thrusters"
                 }
               ]
-            },
-            {
-              "name": "LevelUpReady",
-              "type": "number",
-              "value": 0
             }
           ],
           "effects": [],
@@ -1498,13 +1445,13 @@
                         },
                         {
                           "name": "1/3",
-                          "x": 8,
-                          "y": 24
+                          "x": 16,
+                          "y": 32
                         },
                         {
                           "name": "3/3",
                           "x": 48,
-                          "y": 24
+                          "y": 32
                         }
                       ],
                       "originPoint": {
@@ -1515,8 +1462,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 28,
-                        "y": 24
+                        "x": 32,
+                        "y": 32
                       },
                       "customCollisionMask": []
                     }
@@ -3708,7 +3655,14 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -3717,9 +3671,9 @@
                       "parameters": [
                         "",
                         "UpgradeBox1",
-                        "0",
-                        "0",
-                        ""
+                        "240",
+                        "500",
+                        "\"UI\""
                       ]
                     },
                     {
@@ -3729,9 +3683,9 @@
                       "parameters": [
                         "",
                         "UpgradeBox2",
-                        "5",
-                        "0",
-                        ""
+                        "260",
+                        "500",
+                        "\"UI\""
                       ]
                     },
                     {
@@ -3741,9 +3695,9 @@
                       "parameters": [
                         "",
                         "UpgradeBox3",
-                        "-5",
-                        "0",
-                        ""
+                        "280",
+                        "500",
+                        "\"UI\""
                       ]
                     },
                     {
@@ -3774,17 +3728,6 @@
                         "RandUpgrade3",
                         "=",
                         "RandomInRange(0,9)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "Exp",
-                        "=",
-                        "0"
                       ]
                     }
                   ]
@@ -3848,12 +3791,43 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "UpgradeBox1",
+                        "=",
+                        "SpawnArea.PointX(\"1/3\")",
+                        "=",
+                        "SpawnArea.PointY(\"1/3\")"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "UpgradeBox2",
+                        "=",
+                        "SpawnArea.PointX(\"Center\")",
+                        "=",
+                        "SpawnArea.PointY(\"Center\")"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "UpgradeBox3",
+                        "=",
+                        "SpawnArea.PointX(\"3/3\")",
+                        "=",
+                        "SpawnArea.PointY(\"3/3\")"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
@@ -3942,7 +3916,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "LevelUpReady",
+                        "Exp",
                         "=",
                         "0"
                       ]
@@ -4002,7 +3976,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "LevelUpReady",
+                        "Exp",
                         "=",
                         "0"
                       ]
@@ -4062,7 +4036,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "LevelUpReady",
+                        "Exp",
                         "=",
                         "0"
                       ]
