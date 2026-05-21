@@ -846,6 +846,11 @@
                   "value": "Larger Thrusters"
                 }
               ]
+            },
+            {
+              "name": "HasTracking",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
@@ -3218,6 +3223,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3649,7 +3655,7 @@
                       },
                       "parameters": [
                         "",
-                        "1"
+                        "0.001"
                       ]
                     },
                     {
@@ -3783,6 +3789,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "UpgradeDisplay",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4353,7 +4360,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "UpgradeCode",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4556,6 +4562,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "RegenUpgrade",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4604,7 +4611,7 @@
                                     "Player",
                                     "Health",
                                     "+",
-                                    "0.1"
+                                    "0.5"
                                   ]
                                 }
                               ]
@@ -4657,7 +4664,7 @@
                                     "Player",
                                     "Health",
                                     "+",
-                                    "0.1"
+                                    "0.5"
                                   ]
                                 }
                               ]
@@ -4710,7 +4717,7 @@
                                     "Player",
                                     "Health",
                                     "+",
-                                    "0.1"
+                                    "0.5"
                                   ]
                                 }
                               ]
@@ -5009,7 +5016,7 @@
                                     "Player",
                                     "FireBullet",
                                     "-",
-                                    "0.2",
+                                    "0.1",
                                     ""
                                   ]
                                 }
@@ -5070,7 +5077,7 @@
                                     "Player",
                                     "FireBullet",
                                     "-",
-                                    "0.2",
+                                    "0.1",
                                     ""
                                   ]
                                 }
@@ -5131,7 +5138,7 @@
                                     "Player",
                                     "FireBullet",
                                     "-",
-                                    "0.2",
+                                    "0.1",
                                     ""
                                   ]
                                 }
@@ -5149,6 +5156,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "LargeBulletsUpgrade",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5193,6 +5201,15 @@
                                     "value": "BuiltinCommonInstructions::Once"
                                   },
                                   "parameters": []
+                                },
+                                {
+                                  "type": {
+                                    "value": "PickAllInstances"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Bullet"
+                                  ]
                                 }
                               ],
                               "actions": [
@@ -5264,6 +5281,15 @@
                                     "value": "BuiltinCommonInstructions::Once"
                                   },
                                   "parameters": []
+                                },
+                                {
+                                  "type": {
+                                    "value": "PickAllInstances"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Bullet"
+                                  ]
                                 }
                               ],
                               "actions": [
@@ -5335,6 +5361,15 @@
                                     "value": "BuiltinCommonInstructions::Once"
                                   },
                                   "parameters": []
+                                },
+                                {
+                                  "type": {
+                                    "value": "PickAllInstances"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Bullet"
+                                  ]
                                 }
                               ],
                               "actions": [
@@ -5416,35 +5451,47 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "AddForceTowardObject"
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
                                   },
                                   "parameters": [
-                                    "Bullet",
-                                    "MediumA1",
-                                    "200",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AddForceTowardObject"
-                                  },
-                                  "parameters": [
-                                    "Bullet",
-                                    "SmallA1",
-                                    "200",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AddForceTowardObject"
-                                  },
-                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
                                     "Bullet",
                                     "LargeA1",
-                                    "200",
-                                    "1"
+                                    "1000",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
+                                    "Bullet",
+                                    "MediumA1",
+                                    "1000",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
+                                    "Bullet",
+                                    "SmallA1",
+                                    "1000",
+                                    ""
                                   ]
                                 }
                               ]
@@ -5491,35 +5538,47 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "AddForceTowardObject"
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
                                   },
                                   "parameters": [
-                                    "Bullet",
-                                    "MediumA1",
-                                    "200",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AddForceTowardObject"
-                                  },
-                                  "parameters": [
-                                    "Bullet",
-                                    "SmallA1",
-                                    "200",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AddForceTowardObject"
-                                  },
-                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
                                     "Bullet",
                                     "LargeA1",
-                                    "200",
-                                    "1"
+                                    "1000",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
+                                    "Bullet",
+                                    "MediumA1",
+                                    "1000",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
+                                    "Bullet",
+                                    "SmallA1",
+                                    "1000",
+                                    ""
                                   ]
                                 }
                               ]
@@ -5566,35 +5625,47 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "AddForceTowardObject"
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
                                   },
                                   "parameters": [
-                                    "Bullet",
-                                    "MediumA1",
-                                    "200",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AddForceTowardObject"
-                                  },
-                                  "parameters": [
-                                    "Bullet",
-                                    "SmallA1",
-                                    "200",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AddForceTowardObject"
-                                  },
-                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
                                     "Bullet",
                                     "LargeA1",
-                                    "200",
-                                    "1"
+                                    "1000",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
+                                    "Bullet",
+                                    "MediumA1",
+                                    "1000",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::FireTowardObject"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "Player.PointX(\"Gun\")",
+                                    "Player.PointY(\"Gun\")",
+                                    "Bullet",
+                                    "SmallA1",
+                                    "1000",
+                                    ""
                                   ]
                                 }
                               ]
@@ -5611,6 +5682,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "TripleShotUpgrade",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
