@@ -4374,6 +4374,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Health/Damage",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5219,7 +5220,7 @@
                       },
                       "parameters": [
                         "",
-                        "1"
+                        "0.001"
                       ]
                     },
                     {
