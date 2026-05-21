@@ -3666,13 +3666,32 @@
                   "actions": [
                     {
                       "type": {
+<<<<<<< Updated upstream
+=======
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "MaxExp",
+                        "*",
+                        "1.3"
+                      ]
+                    },
+                    {
+                      "type": {
+>>>>>>> Stashed changes
                         "value": "Create"
                       },
                       "parameters": [
                         "",
                         "UpgradeBox1",
+<<<<<<< Updated upstream
                         "240",
                         "500",
+=======
+                        "0",
+                        "0",
+>>>>>>> Stashed changes
                         "\"UI\""
                       ]
                     },
@@ -3683,8 +3702,13 @@
                       "parameters": [
                         "",
                         "UpgradeBox2",
+<<<<<<< Updated upstream
                         "260",
                         "500",
+=======
+                        "0",
+                        "0",
+>>>>>>> Stashed changes
                         "\"UI\""
                       ]
                     },
@@ -3695,8 +3719,13 @@
                       "parameters": [
                         "",
                         "UpgradeBox3",
+<<<<<<< Updated upstream
                         "280",
                         "500",
+=======
+                        "0",
+                        "0",
+>>>>>>> Stashed changes
                         "\"UI\""
                       ]
                     },
@@ -3705,6 +3734,7 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
+<<<<<<< Updated upstream
                         "RandUpgrade2",
                         "=",
                         "RandomInRange(0,9)"
@@ -3715,6 +3745,8 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
+=======
+>>>>>>> Stashed changes
                         "RandUpgrade1",
                         "=",
                         "RandomInRange(0,9)"
@@ -3725,6 +3757,19 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
+<<<<<<< Updated upstream
+=======
+                        "RandUpgrade2",
+                        "=",
+                        "RandomInRange(0,9)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+>>>>>>> Stashed changes
                         "RandUpgrade3",
                         "=",
                         "RandomInRange(0,9)"
@@ -3924,6 +3969,252 @@
                   ]
                 },
                 {
+<<<<<<< Updated upstream
+=======
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "UpgradeBox2",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeTimeScale"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "UpgradeBox3",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeTimeScale"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "UpgradeDisplay",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                      },
+                      "parameters": [
+                        "UpgradeBox1",
+                        "=",
+                        "Player.UpgradeList[RandUpgrade1]",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                      },
+                      "parameters": [
+                        "UpgradeBox2",
+                        "=",
+                        "Player.UpgradeList[RandUpgrade2]",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                      },
+                      "parameters": [
+                        "UpgradeBox3",
+                        "=",
+                        "Player.UpgradeList[RandUpgrade3]",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "UpgradeBox1",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeTimeScale"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "UpgradeBox3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Exp",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "MaxExp",
+                        "*",
+                        "1.3"
+                      ]
+                    }
+                  ]
+                },
+                {
+>>>>>>> Stashed changes
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4062,6 +4353,7 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+<<<<<<< Updated upstream
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -4076,6 +4368,17 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
+=======
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "HealthUpgrade",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+>>>>>>> Stashed changes
                     {
                       "type": {
                         "value": "BuiltinCommonInstructions::Once"
@@ -4102,6 +4405,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "RegenUpgrade",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4690,6 +4994,7 @@
                   "parameters": []
                 },
                 {
+<<<<<<< Updated upstream
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -4705,6 +5010,243 @@
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
+=======
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "LargeBulletsUpgrade",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox1",
+                            "=",
+                            "Player.UpgradeList[1]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox1",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                                  },
+                                  "parameters": [
+                                    "Bullet",
+                                    "Resizable",
+                                    "*",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                                  },
+                                  "parameters": [
+                                    "Bullet",
+                                    "Resizable",
+                                    "*",
+                                    "2"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox2",
+                            "=",
+                            "Player.UpgradeList[1]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox2",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                                  },
+                                  "parameters": [
+                                    "Bullet",
+                                    "Resizable",
+                                    "*",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                                  },
+                                  "parameters": [
+                                    "Bullet",
+                                    "Resizable",
+                                    "*",
+                                    "2"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox3",
+                            "=",
+                            "Player.UpgradeList[1]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox3",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                                  },
+                                  "parameters": [
+                                    "Bullet",
+                                    "Resizable",
+                                    "*",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                                  },
+                                  "parameters": [
+                                    "Bullet",
+                                    "Resizable",
+                                    "*",
+                                    "2"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "TrackingBulletsUpgrade",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+>>>>>>> Stashed changes
                     {
                       "type": {
                         "value": "FireBullet::FireBullet::SetBulletQuantityOp"
@@ -4717,7 +5259,208 @@
                         ""
                       ]
                     }
+<<<<<<< Updated upstream
                   ]
+=======
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "TripleShotUpgrade",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox1",
+                            "=",
+                            "Player.UpgradeList[3]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox1",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::SetBulletQuantityOp"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "=",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox2",
+                            "=",
+                            "Player.UpgradeList[3]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox2",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::SetBulletQuantityOp"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "=",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox3",
+                            "=",
+                            "Player.UpgradeList[3]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox3",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "FireBullet::FireBullet::SetBulletQuantityOp"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "FireBullet",
+                                    "=",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+>>>>>>> Stashed changes
                 }
               ],
               "parameters": []
