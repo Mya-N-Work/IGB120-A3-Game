@@ -732,6 +732,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Enemy3",
+          "persistentUuid": "533be70e-1592-461c-80f1-1f94635decf1",
+          "width": 0,
+          "x": 1328,
+          "y": 593,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -2350,6 +2366,16 @@
               "name": "enemyThreeXP",
               "type": "number",
               "value": 5
+            },
+            {
+              "name": "NovaDeathActive_",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "TriggeredState_",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -2383,6 +2409,22 @@
               "ExponentialCoolingRate": 0.3,
               "BulletLayer": "",
               "RandomizedAngle": 0
+            },
+            {
+              "acceleration": 400,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellHeight": 20,
+              "cellWidth": 20,
+              "extraBorder": 0,
+              "gridOffsetX": 0,
+              "gridOffsetY": 0,
+              "maxSpeed": 200,
+              "name": "Pathfinding",
+              "rotateObject": true,
+              "smoothingMaxCellGap": 1,
+              "type": "PathfindingBehavior::PathfindingBehavior"
             }
           ],
           "animations": [
@@ -2953,6 +2995,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3668,6 +3711,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4192,7 +4236,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4655,6 +4698,12 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
@@ -4671,10 +4720,12 @@
                 },
                 {
                   "type": {
-                    "value": "Delete"
+                    "value": "SetBooleanObjectVariable"
                   },
                   "parameters": [
                     "Enemy3",
+                    "TriggeredState_",
+                    "True",
                     ""
                   ]
                 }
@@ -4899,7 +4950,25 @@
                     "1000",
                     ""
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "TriggeredState_",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "FireBullet::FireBullet::FireTowardObject"
@@ -4916,6 +4985,219 @@
                   ]
                 }
               ]
+            },
+            {
+              "colorB": 35,
+              "colorG": 166,
+              "colorR": 245,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Nova Death",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "Player",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ClearForces"
+                      },
+                      "parameters": [
+                        "Enemy1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::SetDestination"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "Pathfinding",
+                        "",
+                        "RandomInRange(0,1920)",
+                        "RandomInRange(0,1080)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "FireBullet",
+                        "Enemy3.PointX(\"Enemy3Gun\")",
+                        "Enemy3.PointY(\"Enemy3Gun\")",
+                        "Enemy3Bullet",
+                        "0",
+                        "1000",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "FireBullet",
+                        "Enemy3.PointX(\"Enemy3Gun\")",
+                        "Enemy3.PointY(\"Enemy3Gun\")",
+                        "Enemy3Bullet",
+                        "45",
+                        "1000",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "FireBullet",
+                        "Enemy3.PointX(\"Enemy3Gun\")",
+                        "Enemy3.PointY(\"Enemy3Gun\")",
+                        "Enemy3Bullet",
+                        "90",
+                        "1000",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "FireBullet",
+                        "Enemy3.PointX(\"Enemy3Gun\")",
+                        "Enemy3.PointY(\"Enemy3Gun\")",
+                        "Enemy3Bullet",
+                        "135",
+                        "1000",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "FireBullet",
+                        "Enemy3.PointX(\"Enemy3Gun\")",
+                        "Enemy3.PointY(\"Enemy3Gun\")",
+                        "Enemy3Bullet",
+                        "180",
+                        "1000",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "FireBullet",
+                        "Enemy3.PointX(\"Enemy3Gun\")",
+                        "Enemy3.PointY(\"Enemy3Gun\")",
+                        "Enemy3Bullet",
+                        "225",
+                        "1000",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "FireBullet",
+                        "Enemy3.PointX(\"Enemy3Gun\")",
+                        "Enemy3.PointY(\"Enemy3Gun\")",
+                        "Enemy3Bullet",
+                        "315",
+                        "1000",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "NovaDeathActive_",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "NovaDeathActive_",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ClearForces"
+                          },
+                          "parameters": [
+                            "Enemy1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -5388,6 +5670,10 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
         },
         {
           "name": "Resizable",
