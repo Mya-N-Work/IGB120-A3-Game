@@ -3255,42 +3255,6 @@
                       },
                       "parameters": [
                         "Player",
-<<<<<<< Updated upstream
-                        "MaxExp",
-                        "*",
-                        "1.3"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "Exp",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "MaxHealth",
-                        "*",
-                        "1.3"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-=======
->>>>>>> Stashed changes
                         "Health",
                         "=",
                         "Player.MaxHealth"
@@ -3302,11 +3266,7 @@
                       },
                       "parameters": [
                         "",
-<<<<<<< Updated upstream
-                        "0.01"
-=======
                         "0.001"
->>>>>>> Stashed changes
                       ]
                     }
                   ]
@@ -3666,152 +3626,10 @@
               ],
               "actions": [
                 {
-<<<<<<< Updated upstream
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": ""
                   },
-                  "parameters": [
-                    "Player",
-                    "RandUpgrade1",
-                    "=",
-                    "RandomInRange(0, 13)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "RandUpgrade2",
-                    "=",
-                    "RandomInRange(0, 13)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "RandUpgrade3",
-                    "=",
-                    "RandomInRange(0, 13)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "UpgradeBox1",
-                    "(SceneWindowWidth() / 4) * 1",
-                    "SceneWindowHeight()/2",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "UpgradeBox2",
-                    "(SceneWindowWidth() / 4) * 2",
-                    "SceneWindowHeight()/2",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "UpgradeBox3",
-                    "(SceneWindowWidth() / 4) * 3",
-                    "SceneWindowHeight()/2",
-                    ""
-=======
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "UpgradeBox1",
-                        "CameraCenterX() - 500",
-                        "CameraCenterY()",
-                        "\"UI\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "UpgradeBox2",
-                        "CameraCenterX()",
-                        "CameraCenterY()",
-                        "\"UI\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "UpgradeBox3",
-                        "CameraCenterX() + 500",
-                        "CameraCenterY()",
-                        "\"UI\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "RandUpgrade2",
-                        "=",
-                        "RandomInRange(0,9)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "RandUpgrade1",
-                        "=",
-                        "RandomInRange(0,9)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "RandUpgrade3",
-                        "=",
-                        "RandomInRange(0,9)"
-                      ]
-                    }
->>>>>>> Stashed changes
-                  ]
+                  "parameters": []
                 }
               ]
             },
@@ -3910,43 +3728,6 @@
               ]
             },
             {
-<<<<<<< Updated upstream
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox1",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox2",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                  },
-                  "parameters": [
-                    "UpgradeBox3",
-                    "Resizable",
-                    "=",
-                    "300"
-                  ]
-=======
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
@@ -4212,33 +3993,11 @@
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": []
->>>>>>> Stashed changes
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
-<<<<<<< Updated upstream
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "UpgradeCode",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-=======
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
@@ -5075,7 +4834,14 @@
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
                               "actions": [
                                 {
                                   "type": {
@@ -5139,7 +4905,14 @@
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
                               "actions": [
                                 {
                                   "type": {
@@ -5203,7 +4976,14 @@
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
                               "actions": [
                                 {
                                   "type": {
@@ -5478,7 +5258,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "TripleShotUpgrade",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5671,7 +5450,6 @@
                 }
               ],
               "parameters": []
->>>>>>> Stashed changes
             }
           ],
           "parameters": []
