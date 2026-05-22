@@ -948,6 +948,26 @@
       "name": "RandUpgrade3",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "WaveNum",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "WaveValueStart",
+      "type": "number",
+      "value": 10
+    },
+    {
+      "name": "WaveValueCurrent",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "NumofEnemies",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -973,7 +993,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6406912462476535,
+        "zoomFactor": 0.5427920802473326,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -2288,6 +2308,11 @@
               "name": "enemyOneXP",
               "type": "number",
               "value": 10
+            },
+            {
+              "name": "enemyOneValue",
+              "type": "number",
+              "value": 10
             }
           ],
           "effects": [],
@@ -2904,6 +2929,11 @@
               "name": "enemyTwoXP",
               "type": "number",
               "value": 20
+            },
+            {
+              "name": "enemyTwoValue",
+              "type": "number",
+              "value": 5
             }
           ],
           "effects": [],
@@ -3038,6 +3068,11 @@
               "name": "TriggeredState_",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "enemy3Value",
+              "type": "number",
+              "value": 10
             }
           ],
           "effects": [],
@@ -4956,6 +4991,11 @@
               "name": "enemyFourXP",
               "type": "number",
               "value": 15
+            },
+            {
+              "name": "enemy4Value",
+              "type": "number",
+              "value": 1
             }
           ],
           "effects": [],
@@ -6299,122 +6339,6 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy1",
-                    "<",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy1",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy2",
-                    "<",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy2",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy3",
-                    "<",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy3",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy4",
-                    "<",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy4",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
@@ -6538,165 +6462,6 @@
                             "RandomInRange(0,360)",
                             "50",
                             "1"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "folded": true,
-              "name": "EnemySpawning",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "SpawnArea",
-                        "SpawnPoint",
-                        "=",
-                        "RandomInRange(1,4)"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "SpawnArea",
-                            "SpawnPoint",
-                            "=",
-                            "1"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "Enemy1",
-                            "SpawnArea.PointX(\"BottomLeft\")",
-                            "SpawnArea.PointY(\"BottomLeft\")",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "SpawnArea",
-                            "SpawnPoint",
-                            "=",
-                            "3"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "Enemy1",
-                            "SpawnArea.PointX(\"TopRight\")",
-                            "SpawnArea.PointY(\"TopRight\")",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "SpawnArea",
-                            "SpawnPoint",
-                            "=",
-                            "4"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "Enemy1",
-                            "SpawnArea.PointX(\"BottomRight\")",
-                            "SpawnArea.PointY(\"BottomRight\")",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "SpawnArea",
-                            "SpawnPoint",
-                            "=",
-                            "2"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "Enemy1",
-                            "SpawnArea.PointX(\"TopLeft\")",
-                            "SpawnArea.PointY(\"TopLeft\")",
-                            ""
                           ]
                         }
                       ]
@@ -6841,7 +6606,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Health/Damage",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7312,7 +7076,378 @@
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueCurrent",
+                    "=",
+                    "WaveValueStart"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "WaveCounter",
+                    "Text",
+                    "=",
+                    "WaveNum"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueCurrent",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy4",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy3",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "SpawnArea",
+                    "ObjectSpawner",
+                    "Enemy1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy1",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueCurrent",
+                    "-",
+                    "Enemy1.enemyOneValue"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy2",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueCurrent",
+                    "-",
+                    "Enemy2.enemyTwoValue"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy3",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueCurrent",
+                    "-",
+                    "Enemy3.enemy3Value"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy4",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueCurrent",
+                    "-",
+                    "Enemy4.enemy4Value"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveNum",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueStart",
+                    "+",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "WaveValueCurrent",
+                    "=",
+                    "WaveValueStart"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "enemyOneHealth",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "enemyTwoHealth",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "enemyThreeHealth",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy4",
+                    "enemyFourHealth",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "NumofEnemies",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ],
           "parameters": []
         },
         {
@@ -7320,6 +7455,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7359,7 +7495,7 @@
                     "Enemy1",
                     "Scale",
                     "=",
-                    "2.5"
+                    "2"
                   ]
                 },
                 {
@@ -7410,6 +7546,27 @@
                     "Player",
                     "180",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RotateTowardObject"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Player",
+                    "160",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "30",
+                    "180"
                   ]
                 }
               ]
