@@ -490,6 +490,414 @@
         "name": "Enemy2Bullet",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/ship2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ship2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "SPACESHIP_Thrusters.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"SPACESHIP_Thrusters.png\",\"extension\":\".png\"}",
+        "name": "SPACESHIP_Thrusters.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy6",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy7",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy8",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy9.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy9",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy10.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy10",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy11.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy11",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy12.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy12",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova6",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova7",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova8",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova9.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova9",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova10.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova10",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova11.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova11",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova12.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova12",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova13.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova13",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova14.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova14",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova15.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova15",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova16.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova16",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova17.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova17",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova18.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova18",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova19.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova19",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova20.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova20",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova21.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova21",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova22.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova22",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova23.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova23",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova24.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova24",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova25.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova25",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova26.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova26",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova27.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova27",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova28.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova28",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova29.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova29",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova30.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova30",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova31.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova31",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova32.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova32",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova33.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova33",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DeathNova34.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DeathNova34",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy13.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Enemy13.png\"}",
+        "name": "Enemy13",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy14.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Enemy14.png\"}",
+        "name": "Enemy14",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy15.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Enemy15.png\"}",
+        "name": "Enemy15",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy16.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Enemy16.png\"}",
+        "name": "Enemy16",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy17.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy17",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Enemy18.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Enemy18",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -565,7 +973,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3768772036750906,
+        "zoomFactor": 0.6406912462476535,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -974,7 +1382,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "ship",
+                      "image": "ship2",
                       "points": [
                         {
                           "name": "Gun",
@@ -1001,7 +1409,7 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
+                            "x": 4,
                             "y": 0
                           },
                           {
@@ -1013,7 +1421,67 @@
                             "y": 32
                           },
                           {
-                            "x": 0,
+                            "x": 4,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "thrusters",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "SPACESHIP_Thrusters.png",
+                      "points": [
+                        {
+                          "name": "Gun",
+                          "x": 32,
+                          "y": 16
+                        },
+                        {
+                          "name": "Spawn",
+                          "x": 16,
+                          "y": 0
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 0
+                          },
+                          {
+                            "x": 32,
+                            "y": 0
+                          },
+                          {
+                            "x": 32,
+                            "y": 32
+                          },
+                          {
+                            "x": 4,
                             "y": 32
                           }
                         ]
@@ -1867,12 +2335,17 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Enemy1",
+                      "image": "Enemy13",
                       "points": [
                         {
                           "name": "Enemy1Gun",
+                          "x": 30,
+                          "y": 16
+                        },
+                        {
+                          "name": "Enemy1Aim",
                           "x": 32,
-                          "y": 32
+                          "y": 16
                         }
                       ],
                       "originPoint": {
@@ -1881,28 +2354,169 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 32,
+                        "y": 32
                       },
                       "customCollisionMask": [
                         [
                           {
                             "x": 0,
-                            "y": 0
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 31,
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 31,
+                            "y": 31
                           },
                           {
                             "x": 0,
-                            "y": 64
+                            "y": 31
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy14",
+                      "points": [
+                        {
+                          "name": "Enemy1Gun",
+                          "x": 30,
+                          "y": 16
+                        },
+                        {
+                          "name": "Enemy1Aim",
+                          "x": 32,
+                          "y": 16
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 31,
+                            "y": 1
+                          },
+                          {
+                            "x": 31,
+                            "y": 31
+                          },
+                          {
+                            "x": 0,
+                            "y": 31
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy15",
+                      "points": [
+                        {
+                          "name": "Enemy1Gun",
+                          "x": 30,
+                          "y": 16
+                        },
+                        {
+                          "name": "Enemy1Aim",
+                          "x": 32,
+                          "y": 16
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 31,
+                            "y": 1
+                          },
+                          {
+                            "x": 31,
+                            "y": 31
+                          },
+                          {
+                            "x": 0,
+                            "y": 31
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy16",
+                      "points": [
+                        {
+                          "name": "Enemy1Gun",
+                          "x": 30,
+                          "y": 16
+                        },
+                        {
+                          "name": "Enemy1Aim",
+                          "x": 32,
+                          "y": 16
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 31,
+                            "y": 1
+                          },
+                          {
+                            "x": 31,
+                            "y": 31
+                          },
+                          {
+                            "x": 0,
+                            "y": 31
                           }
                         ]
                       ]
@@ -2302,11 +2916,11 @@
                 {
                   "looping": false,
                   "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.15,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Enemy2",
+                      "image": "Enemy17",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2322,20 +2936,56 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 1,
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 32,
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 32,
+                            "y": 30
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 1,
+                            "y": 30
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy18",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 32,
+                            "y": 1
+                          },
+                          {
+                            "x": 32,
+                            "y": 30
+                          },
+                          {
+                            "x": 1,
+                            "y": 30
                           }
                         ]
                       ]
@@ -2451,7 +3101,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Enemy3",
+                      "image": "Enemy4",
                       "points": [
                         {
                           "name": "Enemy3Gun",
@@ -2473,20 +3123,1797 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 19,
+                            "y": 19
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 44,
+                            "y": 19
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 44,
+                            "y": 44
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy5",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy6",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy7",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy8",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy9",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy10",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy11",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Enemy12",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "DeathNova",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.03,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova2",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova3",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova4",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova5",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova6",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova7",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova8",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova9",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova10",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova11",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova12",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova13",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova14",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova15",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova16",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova17",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova18",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova19",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova20",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova21",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova22",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova23",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova24",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova25",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova26",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova27",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova28",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova29",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova30",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova31",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova32",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova33",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DeathNova34",
+                      "points": [
+                        {
+                          "name": "Enemy3Gun",
+                          "x": 32,
+                          "y": 32
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 19
+                          },
+                          {
+                            "x": 44,
+                            "y": 44
+                          },
+                          {
+                            "x": 19,
+                            "y": 44
                           }
                         ]
                       ]
@@ -2865,6 +5292,45 @@
                     "VelY",
                     "+",
                     "sin(ToRad(Player.Angle())) * Player.Variable(Acceleration) * TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Animation",
+                    "=",
+                    "\"thrusters\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"w\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Animation",
+                    "=",
+                    "\"ship\""
                   ]
                 }
               ]
@@ -4248,6 +6714,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4858,6 +7325,96 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "ResizingEnemies"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "Scale",
+                    "=",
+                    "2.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "Scale",
+                    "=",
+                    "2.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Scale",
+                    "=",
+                    "2.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "Animation",
+                    "=",
+                    "\"Enemy1\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Animation",
+                    "=",
+                    "\"Enemy2\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardObject"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "Player",
+                    "180",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -4913,7 +7470,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "FireBullet::FireBullet::FireTowardObject"
+                    "value": "FireBullet::FireBullet::Fire"
                   },
                   "parameters": [
                     "Enemy1",
@@ -4921,9 +7478,9 @@
                     "Enemy1.PointX(\"Enemy1Gun\")",
                     "Enemy1.PointY(\"Enemy1Gun\")",
                     "Enemy1Bullet",
-                    "Player",
+                    "Enemy1.Angle()",
                     "1000",
-                    ""
+                    "1000"
                   ]
                 }
               ]
@@ -4966,7 +7523,6 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
-              "folded": true,
               "name": "Nova Death",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -5131,6 +7687,17 @@
                         "True",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "Animation",
+                        "=",
+                        "\"DeathNova\""
+                      ]
                     }
                   ],
                   "events": [
@@ -5182,6 +7749,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
