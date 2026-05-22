@@ -973,7 +973,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6406912462476535,
+        "zoomFactor": 0.3768772036750907,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1253,7 +1253,7 @@
             {
               "name": "Health",
               "type": "number",
-              "value": 100
+              "value": 500
             },
             {
               "name": "MaxHealth",
@@ -2295,7 +2295,7 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.5,
+              "FireCooldown": 0.7,
               "HasJustFired": false,
               "RotateBullet": true,
               "FiringArc": 45,
@@ -2904,6 +2904,11 @@
               "name": "enemyTwoXP",
               "type": "number",
               "value": 20
+            },
+            {
+              "name": "cooldownActive_",
+              "type": "boolean",
+              "value": true
             }
           ],
           "effects": [],
@@ -6189,7 +6194,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6352,6 +6356,15 @@
                     "ObjectSpawner",
                     "Enemy2",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "\"cooldownTimer\""
                   ]
                 }
               ]
@@ -7523,11 +7536,13 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
+              "folded": true,
               "name": "Nova Death",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7697,6 +7712,351 @@
                         "Animation",
                         "=",
                         "\"DeathNova\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "NovaDeathActive_",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ClearForces"
+                          },
+                          "parameters": [
+                            "Enemy1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 35,
+              "colorG": 166,
+              "colorR": 245,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Regeneration",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "\"cooldownTimer\"",
+                        ">=",
+                        "8"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PauseObjectTimer"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "\"cooldownTimer\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "cooldownActive_",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "NovaDeathActive_",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ClearForces"
+                          },
+                          "parameters": [
+                            "Enemy1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "cooldownActive_",
+                        "=",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "enemyTwoHealth",
+                        "<",
+                        "150"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "enemyTwoHealth",
+                        "+",
+                        "10"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "enemyTwoHealth",
+                        "=",
+                        "min(Enemy2.enemyTwoHealth, 150) "
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "\"126;211;33\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "\"cooldownTimer\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "NovaDeathActive_",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ClearForces"
+                          },
+                          "parameters": [
+                            "Enemy1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 35,
+              "colorG": 166,
+              "colorR": 245,
+              "creationTime": 0,
+              "name": "Close Quarters",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        "Player",
+                        "250",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::SetCooldownOp"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        "FireBullet",
+                        "=",
+                        "0.5",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "NovaDeathActive_",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ClearForces"
+                          },
+                          "parameters": [
+                            "Enemy1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        "Player",
+                        "250",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::SetCooldownOp"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        "FireBullet",
+                        "=",
+                        "0.7",
+                        ""
                       ]
                     }
                   ],
