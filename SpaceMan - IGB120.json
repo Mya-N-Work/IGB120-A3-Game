@@ -2533,7 +2533,22 @@
               "value": 10
             }
           ],
-          "effects": [],
+          "effects": [
+            {
+              "disabled": true,
+              "effectType": "Glow",
+              "name": "Effect",
+              "doubleParameters": {
+                "distance": 15,
+                "innerStrength": 1,
+                "outerStrength": 2
+              },
+              "stringParameters": {
+                "color": "255;0;0"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [
             {
               "name": "FireBullet",
@@ -3298,7 +3313,22 @@
               "value": 10
             }
           ],
-          "effects": [],
+          "effects": [
+            {
+              "disabled": true,
+              "effectType": "Glow",
+              "name": "Effect",
+              "doubleParameters": {
+                "distance": 15,
+                "innerStrength": 1,
+                "outerStrength": 2
+              },
+              "stringParameters": {
+                "color": "255;0;231"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [
             {
               "name": "FireBullet",
@@ -5236,7 +5266,21 @@
               "value": 0
             }
           ],
-          "effects": [],
+          "effects": [
+            {
+              "effectType": "Glow",
+              "name": "Effect",
+              "doubleParameters": {
+                "distance": 15,
+                "innerStrength": 1,
+                "outerStrength": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [
             {
               "name": "Pathfinding",
@@ -9136,7 +9180,6 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
-              "folded": true,
               "name": "Nova Death",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9183,6 +9226,17 @@
                         "",
                         "RandomInRange(0,1920)",
                         "RandomInRange(0,1080)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Enemy3",
+                        "Effect",
+                        "\"Effect\"",
+                        "yes"
                       ]
                     },
                     {
@@ -9613,7 +9667,6 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
-              "folded": true,
               "name": "Close Quarters",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9645,6 +9698,17 @@
                         "=",
                         "0.5",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        "Effect",
+                        "\"Effect\"",
+                        "yes"
                       ]
                     }
                   ],
@@ -9713,6 +9777,17 @@
                         "FireBullet",
                         "=",
                         "0.7",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Enemy1",
+                        "Effect",
+                        "\"Effect\"",
                         ""
                       ]
                     }
@@ -9907,6 +9982,17 @@
                     },
                     {
                       "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Enemy4",
+                        "Effect",
+                        "\"Effect\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Wait"
                       },
                       "parameters": [
@@ -10019,6 +10105,17 @@
                         "Player",
                         "Enemy4.enemyFourSpeed",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Enemy4",
+                        "Effect",
+                        "\"Effect\"",
+                        "no"
                       ]
                     }
                   ],
