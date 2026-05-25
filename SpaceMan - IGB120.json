@@ -980,6 +980,16 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/sounds/dash.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/dash.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -9930,6 +9940,18 @@
                         "cooldownActive_",
                         "True",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/dash.wav",
+                        "",
+                        "100",
+                        "1"
                       ]
                     }
                   ],
