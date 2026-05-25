@@ -988,13 +988,16 @@
         "name": "assets/sounds/dash.wav",
         "preloadAsMusic": false,
         "preloadAsSound": false,
-        "preloadInCache": false
+        "preloadInCache": false,
+        "userAdded": false
       },
       {
         "file": "assets/medium_asteroid_3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "medium_asteroid_3"
+        "name": "medium_asteroid_3",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "assets/AreaTriggerOne.png",
@@ -1008,7 +1011,9 @@
         "file": "assets/medium_asteroid_4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "medium_asteroid_4"
+        "name": "medium_asteroid_4",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "assets/AreaTriggerTwo.png",
@@ -1022,7 +1027,9 @@
         "file": "assets/larg_asteroid_3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "larg_asteroid_3"
+        "name": "larg_asteroid_3",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "assets/AreaTriggerOne2.png",
@@ -1084,7 +1091,9 @@
         "file": "SmallAsteroid_3.png",
         "kind": "image",
         "metadata": "",
-        "name": "SmallAsteroid_3.png"
+        "name": "SmallAsteroid_3.png",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "assets/AreaTriggerTwo2.png",
@@ -1106,7 +1115,9 @@
         "file": "assets/NewSprite15.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite15"
+        "name": "NewSprite15",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "assets/SlowArea.png",
@@ -1128,7 +1139,9 @@
         "file": "assets/NewSprite17.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite17"
+        "name": "NewSprite17",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "assets/Arrow (13).png",
@@ -1142,7 +1155,9 @@
         "file": "assets/ChargeAttack.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "ChargeAttack"
+        "name": "ChargeAttack",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "Arrow (13)2.png",
@@ -1156,7 +1171,9 @@
         "file": "assets/ChargeAttack2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "ChargeAttack2"
+        "name": "ChargeAttack2",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "assets/Arrow (13)2.png",
@@ -1170,7 +1187,9 @@
         "file": "assets/ChargeAttack3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "ChargeAttack3"
+        "name": "ChargeAttack3",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "Space Background.png",
@@ -1184,7 +1203,9 @@
         "file": "assets/ChargeAttackPrep.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "ChargeAttackPrep"
+        "name": "ChargeAttackPrep",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "Space Background (1).png",
@@ -1198,7 +1219,9 @@
         "file": "assets/ChargeAttackPrep2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "ChargeAttackPrep2"
+        "name": "ChargeAttackPrep2",
+        "smoothed": false,
+        "userAdded": false
       },
       {
         "file": "Space Background (3).png",
@@ -1269,6 +1292,46 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
         "name": "Space Background (8).png2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "LargeAsteroid_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LargeAsteroid_4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Idle.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Idle",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Idle2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Idle2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Idle3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Idle3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Idle4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Idle4",
         "smoothed": false,
         "userAdded": false
       }
@@ -1924,7 +1987,7 @@
             {
               "name": "PlayerRegenSpeed",
               "type": "number",
-              "value": 0.01
+              "value": 0.02
             },
             {
               "name": "PrevHealth",
@@ -2936,7 +2999,7 @@
             {
               "name": "enemyOneDamage",
               "type": "number",
-              "value": 7
+              "value": 3
             },
             {
               "name": "enemyOneFireRate",
@@ -5723,7 +5786,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite14",
+                      "image": "Idle",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5759,7 +5822,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite15",
+                      "image": "Idle2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5795,7 +5858,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite16",
+                      "image": "Idle3",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5831,7 +5894,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite17",
+                      "image": "Idle4",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7188,6 +7251,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LargeA2",
+          "persistentUuid": "b48838c7-9f7d-4b17-9702-c4349b93cd26",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "LargeAsteroid_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 60,
+                            "y": 1
+                          },
+                          {
+                            "x": 60,
+                            "y": 63
+                          },
+                          {
+                            "x": 1,
+                            "y": 63
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -7225,9 +7349,6 @@
           },
           {
             "objectName": "LargeA3"
-          },
-          {
-            "objectName": "LargeA2"
           },
           {
             "objectName": "LargeA1"
@@ -7342,6 +7463,9 @@
           },
           {
             "objectName": "WaveDebug"
+          },
+          {
+            "objectName": "LargeA2"
           }
         ]
       },
@@ -9345,7 +9469,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10146,6 +10269,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11068,6 +11192,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11702,6 +11827,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13156,6 +13282,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "UpgradeDisplay",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15613,6 +15740,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "LazerFocusUpgrade",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -15908,6 +16036,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Area Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
