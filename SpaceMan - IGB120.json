@@ -1518,22 +1518,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
-          "name": "WaveDebug",
-          "persistentUuid": "fb156801-38f6-4e86-b7e4-b3b8508c5a9d",
-          "width": 0,
-          "x": 94,
-          "y": 55,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -7128,6 +7112,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10402,7 +10387,7 @@
                     "WaveCounter",
                     "Text",
                     "=",
-                    "WaveNum"
+                    "\"Wave: \" + WaveNum"
                   ]
                 },
                 {
@@ -10844,7 +10829,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12077,7 +12061,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12570,7 +12553,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "UpgradeCode",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14559,7 +14541,7 @@
                               },
                               "parameters": [
                                 "Bullet",
-                                "AllAsteroidsAndEnemies",
+                                "Enemy3",
                                 "",
                                 "",
                                 ""
@@ -14570,14 +14552,7 @@
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
-                                }
-                              ],
+                              "conditions": [],
                               "actions": [
                                 {
                                   "type": {
@@ -14682,6 +14657,198 @@
                                     "315",
                                     "Player.BulletSpeed",
                                     ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "LazerFocusUpgrade",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox1",
+                            "=",
+                            "Player.UpgradeList[6]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox1",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerDamage",
+                                    "+",
+                                    "10"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox2",
+                            "=",
+                            "Player.UpgradeList[6]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox2",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerDamage",
+                                    "+",
+                                    "10"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::LabelText"
+                          },
+                          "parameters": [
+                            "UpgradeBox3",
+                            "=",
+                            "Player.UpgradeList[6]",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                              },
+                              "parameters": [
+                                "UpgradeBox3",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerDamage",
+                                    "+",
+                                    "10"
                                   ]
                                 }
                               ]
