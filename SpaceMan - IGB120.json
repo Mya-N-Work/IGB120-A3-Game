@@ -970,6 +970,16 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/sounds/explosion.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/explosion.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -6162,7 +6172,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6533,7 +6542,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6672,13 +6680,24 @@
                         "+",
                         "10"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/explosion.wav",
+                        "",
+                        "100",
+                        "1"
+                      ]
                     }
                   ]
                 }
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6817,13 +6836,24 @@
                         "Enemy2",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/explosion.wav",
+                        "",
+                        "100",
+                        "1"
+                      ]
                     }
                   ]
                 }
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6955,13 +6985,24 @@
                         "+",
                         "5"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/explosion.wav",
+                        "",
+                        "100",
+                        "1"
+                      ]
                     }
                   ]
                 }
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7099,6 +7140,18 @@
                         "Exp",
                         "+",
                         "5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/explosion.wav",
+                        "",
+                        "100",
+                        "1"
                       ]
                     }
                   ]
@@ -8607,7 +8660,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
