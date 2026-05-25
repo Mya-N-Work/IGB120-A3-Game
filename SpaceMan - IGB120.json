@@ -898,6 +898,18 @@
         "name": "Enemy18",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Explosion1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion1.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/c693a024a868728da3e9e91c9d23513306582bda6ba10191afc24d6c5667dd5e_Explosion1.png",
+          "name": "Explosion1.png"
+        }
       }
     ]
   },
@@ -1012,6 +1024,31 @@
         },
         {
           "name": "WaveNum",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraShakeTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraShakeTimerMax",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "CameraShakeStrength",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "CameraStartX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraStartY",
           "type": "number",
           "value": 0
         }
@@ -5285,92 +5322,292 @@
           ]
         },
         {
+          "additive": false,
           "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "WaveDebug",
-          "persistentUuid": "2cfd2c62-e060-49c7-9a76-ee5b0cd3ad49",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 60,
+          "emitterForceMin": 45,
+          "flow": 9999,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 15,
+          "name": "BulletParticle",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 24,
+          "particleBlue2": 255,
+          "particleColor1": "0;255;24",
+          "particleColor2": "255;255;255",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 255,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 0.5,
+          "particleLifeTimeMin": 0.3,
+          "particleRed1": 0,
+          "particleRed2": 255,
+          "particleSize1": 100,
+          "particleSize2": 100,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "persistentUuid": "6da206c7-3eb4-4411-a3ed-6d16b8b7685a",
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Point",
+          "tank": 15,
+          "textureParticleName": "",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
           "variables": [],
           "effects": [],
-          "behaviors": [],
-          "string": "Text",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Text",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "lineHeight": 0,
-            "color": "255;255;255"
-          }
+          "behaviors": []
         },
         {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DamageDebug",
-          "persistentUuid": "e0d60a9b-8544-40dc-bded-f4f71321b24e",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
+          "additive": false,
+          "assetStoreId": "6f92b69880fa0285fd436b12083e29adb2d45af5669106fcfbb3d745a72b053d",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 200,
+          "emitterForceMin": 100,
+          "flow": 100,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 1000,
+          "name": "PlayerDeathParticle",
+          "particleAlpha1": 255,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 16,
+          "particleBlue2": 0,
+          "particleColor1": "251;16;16",
+          "particleColor2": "222;255;0",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 16,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 0.7,
+          "particleLifeTimeMin": 0.5,
+          "particleRed1": 251,
+          "particleRed2": 222,
+          "particleSize1": 100,
+          "particleSize2": 0,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "persistentUuid": "8ee793c3-99f4-48f7-8be2-7c830d147b9e",
+          "rendererParam1": 1,
+          "rendererParam2": 1,
+          "rendererType": "Quad",
+          "tank": 50,
+          "textureParticleName": "Explosion1.png",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 10,
           "variables": [],
           "effects": [],
-          "behaviors": [],
-          "string": "Text",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Text",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "lineHeight": 0,
-            "color": "255;255;255"
-          }
+          "behaviors": []
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 60,
+          "emitterForceMin": 45,
+          "flow": 9999,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 15,
+          "name": "EnemyBulletParticle",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 24,
+          "particleBlue2": 255,
+          "particleColor1": "0;255;24",
+          "particleColor2": "255;255;255",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 255,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 0.5,
+          "particleLifeTimeMin": 0.3,
+          "particleRed1": 0,
+          "particleRed2": 255,
+          "particleSize1": 100,
+          "particleSize2": 100,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "persistentUuid": "d8620c3d-ee00-40e6-a823-817890737218",
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Point",
+          "tank": 15,
+          "textureParticleName": "",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 0,
+          "emitterForceMax": 0,
+          "emitterForceMin": 0,
+          "flow": 9999,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 1,
+          "name": "PlayerBulletTrail",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 0,
+          "particleBlue2": 60,
+          "particleColor1": "2;255;0",
+          "particleColor2": "0;255;60",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 255,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 0.2,
+          "particleLifeTimeMin": 0.2,
+          "particleRed1": 2,
+          "particleRed2": 0,
+          "particleSize1": 100,
+          "particleSize2": 0,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "persistentUuid": "cf25d468-05e2-43da-b42c-6a0181322202",
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Point",
+          "tank": 1,
+          "textureParticleName": "",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 0,
+          "emitterForceMax": 0,
+          "emitterForceMin": 0,
+          "flow": 9999,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 1,
+          "name": "Enemy1BulletTrail",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 0,
+          "particleBlue2": 0,
+          "particleColor1": "255;0;0",
+          "particleColor2": "255;0;0",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 0,
+          "particleGreen2": 0,
+          "particleLifeTimeMax": 0.2,
+          "particleLifeTimeMin": 0.2,
+          "particleRed1": 255,
+          "particleRed2": 255,
+          "particleSize1": 100,
+          "particleSize2": 0,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "persistentUuid": "7d2656e8-e115-4436-8664-227ab7aac95f",
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Point",
+          "tank": 1,
+          "textureParticleName": "",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 0,
+          "emitterForceMax": 0,
+          "emitterForceMin": 0,
+          "flow": 9999,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 1,
+          "name": "Enemy3BulletTrail",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 255,
+          "particleBlue2": 255,
+          "particleColor1": "252;0;255",
+          "particleColor2": "255;255;255",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 0,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 0.2,
+          "particleLifeTimeMin": 0.2,
+          "particleRed1": 252,
+          "particleRed2": 255,
+          "particleSize1": 100,
+          "particleSize2": 0,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "persistentUuid": "745ec7f9-bcb6-486c-8759-26c81d80eb6b",
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Point",
+          "tank": 1,
+          "textureParticleName": "",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -5473,7 +5710,22 @@
             "objectName": "UpgradeBox3"
           },
           {
-            "objectName": "WaveDebug"
+            "objectName": "BulletParticle"
+          },
+          {
+            "objectName": "PlayerBulletTrail"
+          },
+          {
+            "objectName": "Enemy1BulletTrail"
+          },
+          {
+            "objectName": "Enemy3BulletTrail"
+          },
+          {
+            "objectName": "EnemyBulletParticle"
+          },
+          {
+            "objectName": "PlayerDeathParticle"
           }
         ]
       },
@@ -6525,6 +6777,25 @@
                     "BulletSpeed",
                     "=",
                     "1000"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Bullet",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "PlayerBulletTrail",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
+                    ""
                   ]
                 }
               ]
@@ -8090,6 +8361,25 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy1Bullet",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Enemy1BulletTrail",
+                    "Enemy1Bullet.CenterX()",
+                    "Enemy1Bullet.CenterY()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8123,10 +8413,30 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy3Bullet",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Enemy3BulletTrail",
+                    "Enemy3Bullet.CenterX()",
+                    "Enemy3Bullet.CenterY()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
               "colorB": 35,
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
+              "folded": true,
               "name": "Nova Death",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10665,6 +10975,103 @@
                 }
               ],
               "parameters": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Effects",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraStartX",
+                    "=",
+                    "CameraCenterX()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraStartY",
+                    "=",
+                    "CameraCenterY()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "CameraShakeTimer",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraShakeTimer",
+                    "-",
+                    "TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraCenterX"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "CameraStartX+RandomFloatInRange(-CameraShakeStrength*CameraShakeTimer, CameraShakeStrength*CameraShakeTimer)",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraCenterY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "CameraStartY+RandomFloatInRange(-CameraShakeStrength*CameraShakeTimer, CameraShakeStrength*CameraShakeTimer)",
+                    "",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
