@@ -9339,7 +9339,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"area\" + ToString(RandomInRange(0,2))",
+                            "\"area\" + ToString(RandomInRange(1,2))",
                             ""
                           ]
                         }
@@ -21553,7 +21553,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"area\" + ToString(RandomInRange(0,2))",
+                            "\"area\" + ToString(RandomInRange(1,2))",
                             ""
                           ]
                         }
@@ -33860,7 +33860,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"area\" + ToString(RandomInRange(0,2))",
+                            "\"area\" + ToString(RandomInRange(1,2))",
                             ""
                           ]
                         }
@@ -46202,7 +46202,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"area\" + ToString(RandomInRange(0,2))",
+                            "\"area\" + ToString(RandomInRange(1,2))",
                             ""
                           ]
                         }
@@ -58381,7 +58381,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"area\" + ToString(RandomInRange(0,2))",
+                            "\"area\" + ToString(RandomInRange(1,2))",
                             ""
                           ]
                         }
