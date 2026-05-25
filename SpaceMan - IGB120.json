@@ -910,6 +910,66 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/c693a024a868728da3e9e91c9d23513306582bda6ba10191afc24d6c5667dd5e_Explosion1.png",
           "name": "Explosion1.png"
         }
+      },
+      {
+        "file": "assets/sounds/laserShoot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/laserShoot.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/sounds/asteroidExplosion.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/asteroidExplosion.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/sounds/playerDeath.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/playerDeath.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/sounds/levelUp.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/levelUp.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/sounds/powerUp.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/powerUp.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/sounds/hitHurt.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/sounds/hitHurt.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -1035,7 +1095,7 @@
         {
           "name": "CameraShakeTimerMax",
           "type": "number",
-          "value": 1
+          "value": 0.6
         },
         {
           "name": "CameraShakeStrength",
@@ -1453,6 +1513,11 @@
               "name": "PlayerRegenSpeed",
               "type": "number",
               "value": 0.01
+            },
+            {
+              "name": "PrevHealth",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
@@ -5696,6 +5761,54 @@
             "lineHeight": 0,
             "color": "255;255;255"
           }
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 90,
+          "emitterForceMin": 70,
+          "flow": 9999,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 20,
+          "name": "DeathNovaParticle",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 249,
+          "particleBlue2": 255,
+          "particleColor1": "255;0;249",
+          "particleColor2": "255;255;255",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 0,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 0.5,
+          "particleLifeTimeMin": 0.3,
+          "particleRed1": 255,
+          "particleRed2": 255,
+          "particleSize1": 100,
+          "particleSize2": 100,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "persistentUuid": "86a7c46d-92e1-48d6-9f5c-73065539c8f1",
+          "rendererParam1": 9,
+          "rendererParam2": 1,
+          "rendererType": "Point",
+          "tank": 20,
+          "textureParticleName": "",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -5808,6 +5921,9 @@
           },
           {
             "objectName": "EnemyBulletParticle"
+          },
+          {
+            "objectName": "DeathNovaParticle"
           },
           {
             "objectName": "PlayerDeathParticle"
@@ -6046,6 +6162,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Shooting",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6060,6 +6177,16 @@
                   "parameters": [
                     "",
                     "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::IsReadyToShoot"
+                  },
+                  "parameters": [
+                    "Player",
+                    "FireBullet",
+                    ""
                   ]
                 }
               ],
@@ -6077,6 +6204,18 @@
                     "Player.Angle()",
                     "Player.BulletSpeed",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/laserShoot.wav",
+                    "",
+                    "100",
+                    "RandomFloatInRange(0.95,1.05)"
                   ]
                 }
               ]
@@ -6105,6 +6244,30 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/asteroidExplosion.wav",
+                    "",
+                    "100",
+                    "RandomFloatInRange(0.95,1.05)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletParticle",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
                     ""
                   ]
                 }
@@ -6195,6 +6358,30 @@
                     "Bullet",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/asteroidExplosion.wav",
+                    "",
+                    "100",
+                    "RandomFloatInRange(0.95,1.05)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletParticle",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -6283,6 +6470,30 @@
                     "Bullet",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/asteroidExplosion.wav",
+                    "",
+                    "100",
+                    "RandomFloatInRange(0.95,1.05)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletParticle",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -6357,6 +6568,18 @@
                     "enemyOneHealth",
                     "-",
                     "Player.PlayerDamage"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletParticle",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
+                    ""
                   ]
                 }
               ],
@@ -6491,6 +6714,18 @@
                     "-",
                     "Player.PlayerDamage"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletParticle",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -6624,6 +6859,18 @@
                     "-",
                     "Player.PlayerDamage"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletParticle",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -6749,6 +6996,18 @@
                     "enemyFourHealth",
                     "-",
                     "Player.PlayerDamage"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletParticle",
+                    "Bullet.CenterX()",
+                    "Bullet.CenterY()",
+                    ""
                   ]
                 }
               ],
@@ -7283,6 +7542,23 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PrevHealth",
+                    "=",
+                    "Player.Health"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -7297,6 +7573,18 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "PlayerDeathParticle",
+                    "Player.X()",
+                    "Player.Y()",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "Delete"
@@ -7316,6 +7604,18 @@
                     "800",
                     "400",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/playerDeath.wav",
+                    "",
+                    "100",
+                    "1"
                   ]
                 }
               ]
@@ -7744,10 +8044,52 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Audio",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<",
+                    "Player.PrevHealth"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/hitHurt.wav",
+                    "",
+                    "50",
+                    "RandomFloatInRange(0.95,1.05)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraShakeTimer",
+                    "=",
+                    "CameraShakeTimerMax"
+                  ]
+                }
+              ]
+            }
+          ],
           "parameters": []
         },
         {
@@ -7755,6 +8097,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8432,7 +8775,18 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::IsReadyToShoot"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "FireBullet",
+                    ""
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -8447,6 +8801,18 @@
                     "Enemy1.Angle()",
                     "1000",
                     "1000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/laserShoot.wav",
+                    "",
+                    "60",
+                    "130"
                   ]
                 }
               ]
@@ -8483,6 +8849,16 @@
                     "=",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::IsReadyToShoot"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "FireBullet",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -8499,6 +8875,18 @@
                     "Player",
                     "1000",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/laserShoot.wav",
+                    "",
+                    "60",
+                    "130"
                   ]
                 }
               ]
@@ -8527,7 +8915,6 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
-              "folded": true,
               "name": "Nova Death",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8546,6 +8933,12 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -8703,6 +9096,30 @@
                         "=",
                         "\"DeathNova\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/playerDeath.wav",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "DeathNovaParticle",
+                        "Enemy3.CenterX()",
+                        "Enemy3.CenterY()",
+                        ""
+                      ]
                     }
                   ],
                   "events": [
@@ -8751,6 +9168,11 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": []
                     }
                   ]
                 }
@@ -8785,7 +9207,20 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/sounds/levelUp.wav",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -8907,7 +9342,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "UpgradeDisplay",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9077,6 +9511,18 @@
                         "=",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/powerUp.wav",
+                        "",
+                        "100",
+                        "1"
+                      ]
                     }
                   ]
                 },
@@ -9137,6 +9583,18 @@
                         "=",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/powerUp.wav",
+                        "",
+                        "100",
+                        "1"
+                      ]
                     }
                   ]
                 },
@@ -9196,6 +9654,18 @@
                         "Exp",
                         "=",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/powerUp.wav",
+                        "",
+                        "70",
+                        "1"
                       ]
                     }
                   ]
@@ -10986,6 +11456,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "SplittingShots",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
