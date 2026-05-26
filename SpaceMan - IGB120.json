@@ -1334,6 +1334,134 @@
         "name": "Idle4",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite18.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite16",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite18.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite18",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite19.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite19",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite20.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite20",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite21.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite21",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite22.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite22",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite23.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite23",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite24.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite24",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite25.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite25",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite26.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite26",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite27.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite27",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite28.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite28",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite29.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite29",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite30.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite30",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite31.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite31",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite32.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite32",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -1434,7 +1562,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.1816906597848637,
+        "zoomFactor": 0.27050126039625755,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1733,22 +1861,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
-          "name": "WaveDebug",
-          "persistentUuid": "fb156801-38f6-4e86-b7e4-b3b8508c5a9d",
-          "width": 0,
-          "x": 94,
-          "y": 55,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 1079,
@@ -1871,7 +1983,7 @@
             {
               "name": "MaxHealth",
               "type": "number",
-              "value": 100
+              "value": 400
             },
             {
               "name": "XPRequired",
@@ -9752,140 +9864,6 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy1",
-                    "<",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy1",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy2",
-                    "<",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy2",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetObjectTimer"
-                  },
-                  "parameters": [
-                    "Enemy2",
-                    "\"cooldownTimer\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy3",
-                    "<",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy3",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "MediumA1",
-                    "Enemy4",
-                    "<",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
-                  },
-                  "parameters": [
-                    "SpawnArea",
-                    "ObjectSpawner",
-                    "Enemy4",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetObjectTimer"
-                  },
-                  "parameters": [
-                    "Enemy4",
-                    "\"cooldownTimer\""
-                  ]
-                }
-              ]
-            },
-            {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
@@ -11192,7 +11170,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11602,6 +11579,171 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "MediumA1",
+                        "Enemy1",
+                        "<",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                      },
+                      "parameters": [
+                        "SpawnArea",
+                        "ObjectSpawner",
+                        "Enemy1",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "MediumA1",
+                        "Enemy1",
+                        "<",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                      },
+                      "parameters": [
+                        "SpawnArea",
+                        "ObjectSpawner",
+                        "Enemy1",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "MediumA1",
+                            "Enemy2",
+                            "<",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                          },
+                          "parameters": [
+                            "SpawnArea",
+                            "ObjectSpawner",
+                            "Enemy2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Enemy2",
+                            "\"cooldownTimer\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "MediumA1",
+                            "Enemy3",
+                            "<",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                          },
+                          "parameters": [
+                            "SpawnArea",
+                            "ObjectSpawner",
+                            "Enemy3",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "MediumA1",
+                            "Enemy4",
+                            "<",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                          },
+                          "parameters": [
+                            "SpawnArea",
+                            "ObjectSpawner",
+                            "Enemy4",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Enemy4",
+                            "\"cooldownTimer\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -11650,7 +11792,18 @@
                       ]
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "WaveNum",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -11719,7 +11872,7 @@
                       "parameters": [
                         "WaveNum",
                         "=",
-                        "4"
+                        "2"
                       ]
                     }
                   ],
@@ -13127,6 +13280,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13282,7 +13436,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "UpgradeDisplay",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -16340,7 +16493,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3526904934771258,
+        "zoomFactor": 0.22169247275005355,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -16594,22 +16747,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
-          "name": "WaveDebug",
-          "persistentUuid": "fb156801-38f6-4e86-b7e4-b3b8508c5a9d",
-          "width": 0,
-          "x": 94,
-          "y": 55,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 1079,
@@ -16748,7 +16885,7 @@
             {
               "name": "MaxHealth",
               "type": "number",
-              "value": 100
+              "value": 400
             },
             {
               "name": "XPRequired",
@@ -16864,7 +17001,7 @@
             {
               "name": "PlayerRegenSpeed",
               "type": "number",
-              "value": 0.01
+              "value": 0.02
             },
             {
               "name": "PrevHealth",
@@ -17842,7 +17979,7 @@
             {
               "name": "enemyOneDamage",
               "type": "number",
-              "value": 7
+              "value": 3
             },
             {
               "name": "enemyOneFireRate",
@@ -20599,7 +20736,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite7",
+                      "image": "NewSprite16",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -20615,20 +20752,128 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 3,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 30,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 30,
+                            "y": 32
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite18",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite19",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite20",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
                           }
                         ]
                       ]
@@ -22870,7 +23115,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -23017,9 +23261,9 @@
                   },
                   "parameters": [
                     "MediumA1",
-                    "Enemy2",
+                    "Enemy4",
                     "<",
-                    "2"
+                    "1"
                   ]
                 }
               ],
@@ -23031,7 +23275,7 @@
                   "parameters": [
                     "SpawnArea",
                     "ObjectSpawner",
-                    "Enemy2",
+                    "Enemy4",
                     ""
                   ]
                 },
@@ -23040,7 +23284,7 @@
                     "value": "ResetObjectTimer"
                   },
                   "parameters": [
-                    "Enemy2",
+                    "Enemy4",
                     "\"cooldownTimer\""
                   ]
                 }
@@ -23084,9 +23328,9 @@
                   },
                   "parameters": [
                     "MediumA1",
-                    "Enemy4",
+                    "Enemy2",
                     "<",
-                    "1"
+                    "2"
                   ]
                 }
               ],
@@ -23098,7 +23342,7 @@
                   "parameters": [
                     "SpawnArea",
                     "ObjectSpawner",
-                    "Enemy4",
+                    "Enemy2",
                     ""
                   ]
                 },
@@ -23107,7 +23351,7 @@
                     "value": "ResetObjectTimer"
                   },
                   "parameters": [
-                    "Enemy4",
+                    "Enemy2",
                     "\"cooldownTimer\""
                   ]
                 }
@@ -24467,7 +24711,7 @@
                       "parameters": [
                         "WaveNum",
                         "=",
-                        "4"
+                        "2"
                       ]
                     }
                   ],
@@ -29000,7 +29244,7 @@
             {
               "name": "MaxHealth",
               "type": "number",
-              "value": 100
+              "value": 400
             },
             {
               "name": "XPRequired",
@@ -29122,7 +29366,7 @@
             {
               "name": "PlayerRegenSpeed",
               "type": "number",
-              "value": 0.01
+              "value": 0.02
             },
             {
               "name": "PrevHealth",
@@ -30100,7 +30344,7 @@
             {
               "name": "enemyOneDamage",
               "type": "number",
-              "value": 7
+              "value": 3
             },
             {
               "name": "enemyOneFireRate",
@@ -32857,7 +33101,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite7",
+                      "image": "NewSprite21",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -32873,20 +33117,128 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 3,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 30,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 30,
+                            "y": 32
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite22",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite23",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite24",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
                           }
                         ]
                       ]
@@ -36774,7 +37126,7 @@
                       "parameters": [
                         "WaveNum",
                         "=",
-                        "4"
+                        "2"
                       ]
                     }
                   ],
@@ -41417,7 +41769,7 @@
             {
               "name": "MaxHealth",
               "type": "number",
-              "value": 100
+              "value": 400
             },
             {
               "name": "XPRequired",
@@ -41605,7 +41957,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
@@ -42511,7 +42863,7 @@
             {
               "name": "enemyOneDamage",
               "type": "number",
-              "value": 7
+              "value": 4
             },
             {
               "name": "enemyOneFireRate",
@@ -45268,7 +45620,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite7",
+                      "image": "NewSprite25",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -45284,20 +45636,128 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 3,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 30,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 30,
+                            "y": 32
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite26",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite27",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite28",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
                           }
                         ]
                       ]
@@ -49116,7 +49576,7 @@
                       "parameters": [
                         "WaveNum",
                         "=",
-                        "4"
+                        "2"
                       ]
                     }
                   ],
@@ -53203,7 +53663,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.38958562738273217,
+        "zoomFactor": 0.34118560234734807,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -57446,7 +57906,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite7",
+                      "image": "NewSprite29",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -57462,20 +57922,128 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 3,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 30,
+                            "y": 2
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 30,
+                            "y": 32
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite30",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite31",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite32",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 2
+                          },
+                          {
+                            "x": 30,
+                            "y": 32
+                          },
+                          {
+                            "x": 3,
+                            "y": 32
                           }
                         ]
                       ]
@@ -61295,7 +61863,7 @@
                       "parameters": [
                         "WaveNum",
                         "=",
-                        "4"
+                        "2"
                       ]
                     }
                   ],
