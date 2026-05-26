@@ -1562,7 +1562,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.27050126039625755,
+        "zoomFactor": 0.27962265218394,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -11832,7 +11832,7 @@
                       },
                       "parameters": [
                         "WaveNum",
-                        "=",
+                        ">=",
                         "4"
                       ]
                     }
@@ -24675,7 +24675,7 @@
                       },
                       "parameters": [
                         "WaveNum",
-                        "=",
+                        ">=",
                         "4"
                       ]
                     }
@@ -37093,7 +37093,7 @@
                       },
                       "parameters": [
                         "WaveNum",
-                        "=",
+                        ">=",
                         "4"
                       ]
                     }
@@ -49545,7 +49545,7 @@
                       },
                       "parameters": [
                         "WaveNum",
-                        "=",
+                        ">=",
                         "4"
                       ]
                     }
@@ -61836,7 +61836,7 @@
                       },
                       "parameters": [
                         "WaveNum",
-                        "=",
+                        ">=",
                         "4"
                       ]
                     }
