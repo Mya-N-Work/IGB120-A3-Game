@@ -1562,7 +1562,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.27962265218394,
+        "zoomFactor": 0.2616774116992174,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1924,6 +1924,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RetryButton",
+          "persistentUuid": "e7940ebd-bdd4-463e-8d74-320a5fdf4f4a",
+          "width": 0,
+          "x": 828,
+          "y": 528,
+          "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -1983,7 +1999,7 @@
             {
               "name": "MaxHealth",
               "type": "number",
-              "value": 400
+              "value": 300
             },
             {
               "name": "XPRequired",
@@ -2999,7 +3015,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "GAME OVER \nskill issue",
+          "string": "GAME OVER \n",
           "font": "",
           "textAlignment": "left",
           "characterSize": 80,
@@ -3022,7 +3038,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER \nskill issue",
+            "text": "GAME OVER \n",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -7424,6 +7440,25 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
+          "name": "RetryButton",
+          "persistentUuid": "763145ab-7286-48ea-8048-a50b84489b8f",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "Transparent Button With White Blue Border",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 6,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0,
+            "LabelText": "Retry?"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -7578,6 +7613,9 @@
           },
           {
             "objectName": "LargeA2"
+          },
+          {
+            "objectName": "RetryButton"
           }
         ]
       },
@@ -9581,6 +9619,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11308,6 +11347,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -16204,6 +16244,94 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "RetryButton",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "RetryButton"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"area0\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -16784,6 +16912,22 @@
           "x": 1673,
           "y": 478,
           "zOrder": 24,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RetryButton",
+          "persistentUuid": "d661c9b4-4738-4cbf-b820-c6a874e0ad01",
+          "width": 0,
+          "x": 826,
+          "y": 533,
+          "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -17828,7 +17972,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "GAME OVER \nskill issue",
+          "string": "GAME OVER \n",
           "font": "",
           "textAlignment": "left",
           "characterSize": 80,
@@ -17851,7 +17995,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER \nskill issue",
+            "text": "GAME OVER \n",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -21709,6 +21853,147 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LargeA3",
+          "persistentUuid": "c1804036-4993-4ea2-8abc-70cf4081ef25",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "LargeAsteroid_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 3
+                          },
+                          {
+                            "x": 62,
+                            "y": 3
+                          },
+                          {
+                            "x": 62,
+                            "y": 63
+                          },
+                          {
+                            "x": 1,
+                            "y": 63
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LargeA2",
+          "persistentUuid": "cf6eb77a-915c-4864-86d2-8fa85143473d",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "LargeAsteroid_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 60,
+                            "y": 1
+                          },
+                          {
+                            "x": 60,
+                            "y": 63
+                          },
+                          {
+                            "x": 1,
+                            "y": 63
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
+          "name": "RetryButton",
+          "persistentUuid": "d9eba2a2-4d62-46dc-b69a-f49c48f57194",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "Transparent Button With White Blue Border",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 6,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0,
+            "LabelText": "Retry?"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -21739,6 +22024,12 @@
             "objectName": "Enemy3Bullet"
           },
           {
+            "objectName": "LargeA3"
+          },
+          {
+            "objectName": "LargeA2"
+          },
+          {
             "objectName": "MediumA1"
           },
           {
@@ -21752,6 +22043,9 @@
           },
           {
             "objectName": "SpawnArea"
+          },
+          {
+            "objectName": "RetryButton"
           },
           {
             "objectName": "WaveCleared"
@@ -23076,6 +23370,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -23463,6 +23758,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -24098,6 +24394,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Audio",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -24150,6 +24447,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28460,6 +28758,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Area Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28533,6 +28832,94 @@
                     "PlayerLight",
                     "=",
                     "Player.PointY(\"Center\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "RetryButton",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "RetryButton"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"area0\"",
+                    ""
                   ]
                 }
               ]
@@ -29071,22 +29458,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
-          "name": "WaveDebug",
-          "persistentUuid": "fb156801-38f6-4e86-b7e4-b3b8508c5a9d",
-          "width": 0,
-          "x": 94,
-          "y": 55,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 1079,
@@ -29147,6 +29518,22 @@
           "x": 1673,
           "y": 478,
           "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RetryButton",
+          "persistentUuid": "2042087b-9168-4338-b730-b51f20d6a564",
+          "width": 0,
+          "x": 828,
+          "y": 558,
+          "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -30197,7 +30584,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "GAME OVER \nskill issue",
+          "string": "GAME OVER \n",
           "font": "",
           "textAlignment": "left",
           "characterSize": 80,
@@ -30220,7 +30607,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER \nskill issue",
+            "text": "GAME OVER \n",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -34063,6 +34450,25 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
+          "name": "RetryButton",
+          "persistentUuid": "12708861-1eee-44ac-b96a-e17878e1d23e",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "Transparent Button With White Blue Border",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 6,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0,
+            "LabelText": "Retry?"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -34082,6 +34488,9 @@
           },
           {
             "objectName": "HealthBar"
+          },
+          {
+            "objectName": "RetryButton"
           },
           {
             "objectName": "Timer"
@@ -35427,6 +35836,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -36516,6 +36926,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Audio",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -36568,6 +36979,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -40878,6 +41290,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Area Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -41088,6 +41501,94 @@
                   "parameters": [
                     "burnActive",
                     "False",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "RetryButton",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "RetryButton"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"area0\"",
                     ""
                   ]
                 }
@@ -41599,22 +42100,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
-          "name": "WaveDebug",
-          "persistentUuid": "fb156801-38f6-4e86-b7e4-b3b8508c5a9d",
-          "width": 0,
-          "x": 94,
-          "y": 55,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 1079,
@@ -41675,6 +42160,22 @@
           "x": 1673,
           "y": 478,
           "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RetryButton",
+          "persistentUuid": "e0b1d7bf-922b-410c-b2cf-33155b139fb7",
+          "width": 0,
+          "x": 817,
+          "y": 567,
+          "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -42719,7 +43220,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "GAME OVER \nskill issue",
+          "string": "GAME OVER \n",
           "font": "",
           "textAlignment": "left",
           "characterSize": 80,
@@ -42742,7 +43243,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER \nskill issue",
+            "text": "GAME OVER \n",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -46585,6 +47086,25 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
+          "name": "RetryButton",
+          "persistentUuid": "95e05922-10dd-48c1-9dc6-799148138f44",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "Transparent Button With White Blue Border",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 6,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0,
+            "LabelText": "Retry?"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -46643,6 +47163,9 @@
           },
           {
             "objectName": "GameOver"
+          },
+          {
+            "objectName": "RetryButton"
           },
           {
             "objectName": "WaveCounter"
@@ -47946,6 +48469,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -48969,6 +49493,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Audio",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -49021,6 +49546,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -53330,6 +53856,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Area Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -53377,6 +53904,95 @@
                   },
                   "parameters": [
                     "ArrowTwo"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "RetryButton",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "RetryButton"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"area0\"",
+                    ""
                   ]
                 }
               ]
@@ -53887,22 +54503,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
-          "name": "WaveDebug",
-          "persistentUuid": "fb156801-38f6-4e86-b7e4-b3b8508c5a9d",
-          "width": 0,
-          "x": 94,
-          "y": 55,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 1079,
@@ -53963,6 +54563,22 @@
           "x": 1673,
           "y": 478,
           "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RetryButton",
+          "persistentUuid": "bd404d39-878b-4b7f-9ef9-c759f0341828",
+          "width": 0,
+          "x": 846,
+          "y": 561,
+          "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -55007,7 +55623,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "GAME OVER \nskill issue",
+          "string": "GAME OVER \n",
           "font": "",
           "textAlignment": "left",
           "characterSize": 80,
@@ -55030,7 +55646,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER \nskill issue",
+            "text": "GAME OVER \n",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -58873,6 +59489,25 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
+          "name": "RetryButton",
+          "persistentUuid": "d1084e1e-f44d-4956-bb2a-7cfb6cafb22a",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "Transparent Button With White Blue Border",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 6,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0,
+            "LabelText": "Retry?"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -58925,6 +59560,9 @@
           },
           {
             "objectName": "GameOver"
+          },
+          {
+            "objectName": "RetryButton"
           },
           {
             "objectName": "WaveCounter"
@@ -60237,6 +60875,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -60624,6 +61263,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "LevelUp",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -61259,6 +61899,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Audio",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -61311,6 +61952,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -65621,6 +66263,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Area Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -65668,6 +66311,95 @@
                   },
                   "parameters": [
                     "ArrowTwo"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "RetryButton",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "RetryButton"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "RetryButton",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"area0\"",
+                    ""
                   ]
                 }
               ]
