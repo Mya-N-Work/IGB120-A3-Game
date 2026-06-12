@@ -1562,7 +1562,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2616774116992174,
+        "zoomFactor": 0.3411856023473481,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -3791,7 +3791,21 @@
               "value": true
             }
           ],
-          "effects": [],
+          "effects": [
+            {
+              "effectType": "Glow",
+              "name": "Effect",
+              "doubleParameters": {
+                "distance": 15,
+                "innerStrength": 1,
+                "outerStrength": 2
+              },
+              "stringParameters": {
+                "color": "0;255;50"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -5881,9 +5895,33 @@
               "name": "TargetY",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "Variable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "ChargeActive_",
+              "type": "boolean",
+              "value": false
             }
           ],
-          "effects": [],
+          "effects": [
+            {
+              "effectType": "Glow",
+              "name": "Effect",
+              "doubleParameters": {
+                "distance": 15,
+                "innerStrength": 1,
+                "outerStrength": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [
             {
               "name": "Pathfinding",
@@ -11347,7 +11385,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Waves",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11441,7 +11478,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "SpawningEnemies",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -11622,6 +11658,26 @@
                             "=",
                             "RandomInRange(0,3)"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Enemy2",
+                            "\"cooldownTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy2",
+                            "cooldownActive_",
+                            "True",
+                            ""
+                          ]
                         }
                       ]
                     },
@@ -11740,6 +11796,15 @@
                             "=",
                             "RandomInRange(0,3)"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Enemy4",
+                            "\"cooldownTimer\""
+                          ]
                         }
                       ]
                     }
@@ -11850,6 +11915,107 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy1",
+                            "enemyOneHealth",
+                            "+",
+                            "10"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy2",
+                            "enemyTwoHealth",
+                            "+",
+                            "10"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "enemyThreeHealth",
+                            "+",
+                            "10"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy4",
+                            "enemyFourHealth",
+                            "+",
+                            "10"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy1",
+                            "enemyOneDamage",
+                            "+",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy4",
+                            "enemyFourDamage",
+                            "+",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "enemyThreeDamage",
+                            "+",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy2",
+                            "enemyTwoDamage",
+                            "+",
+                            "5"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -11867,6 +12033,7 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -11984,7 +12151,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12563,7 +12729,6 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
-              "folded": true,
               "name": "Regeneration",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12674,6 +12839,17 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "Effect",
+                        "\"Effect\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
@@ -12692,6 +12868,14 @@
                         "enemyTwoHealth",
                         "=",
                         "min(Enemy2.enemyTwoHealth, 150) "
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1.5"
                       ]
                     },
                     {
@@ -12761,6 +12945,35 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "cooldownActive_",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Enemy2",
+                        "Effect",
+                        "\"Effect\"",
+                        "no"
+                      ]
+                    }
+                  ]
                 }
               ],
               "parameters": []
@@ -12770,7 +12983,6 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
-              "folded": true,
               "name": "Close Quarters",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12942,7 +13154,6 @@
               "colorG": 166,
               "colorR": 245,
               "creationTime": 0,
-              "folded": true,
               "name": "Charge Attack",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12959,7 +13170,7 @@
                         "Enemy4",
                         "\"cooldownTimer\"",
                         ">=",
-                        "10"
+                        "3"
                       ]
                     },
                     {
@@ -13066,6 +13277,79 @@
                       },
                       "parameters": [
                         "Enemy4",
+                        "ChargeActive_",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/sounds/dash.wav",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            "NovaDeathActive_",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ClearForces"
+                          },
+                          "parameters": [
+                            "Enemy1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Enemy3",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy4",
                         "cooldownActive_",
                         "=",
                         ""
@@ -13086,13 +13370,12 @@
                     },
                     {
                       "type": {
-                        "value": "AddForceTowardPosition"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
                         "Enemy4",
-                        "Enemy4.TargetX",
-                        "Enemy4.TargetY",
-                        "700",
+                        "ChargeActive_",
+                        "True",
                         ""
                       ]
                     },
@@ -13105,6 +13388,18 @@
                         "Effect",
                         "\"Effect\"",
                         "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceTowardPosition"
+                      },
+                      "parameters": [
+                        "Enemy4",
+                        "Enemy4.TargetX",
+                        "Enemy4.TargetY",
+                        "700",
+                        ""
                       ]
                     },
                     {
@@ -13146,14 +13441,13 @@
                     },
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "",
-                        "assets/sounds/dash.wav",
-                        "",
-                        "100",
-                        "1"
+                        "Enemy4",
+                        "ChargeActive_",
+                        "False",
+                        ""
                       ]
                     }
                   ],
@@ -16193,7 +16487,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Area Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
