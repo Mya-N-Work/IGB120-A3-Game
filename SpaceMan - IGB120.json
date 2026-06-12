@@ -25,7 +25,7 @@
     "author": "",
     "windowWidth": 1920,
     "windowHeight": 1080,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "C:\\Users\\myang\\Downloads\\DRIFTER",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -67096,7 +67096,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3411856023473453,
+        "zoomFactor": 0.27962265218393756,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -67150,23 +67150,6 @@
           "x": 850,
           "y": 395,
           "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 64,
-          "height": 84,
-          "keepRatio": true,
-          "layer": "",
-          "name": "QuitGame",
-          "persistentUuid": "4e605f10-5b11-4785-bce3-53a1ff78416f",
-          "width": 240,
-          "x": 850,
-          "y": 607,
-          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -67394,25 +67377,6 @@
             "TopPadding": 0,
             "HoveredFadeOutDuration": 0,
             "LabelText": "Play"
-          }
-        },
-        {
-          "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
-          "name": "QuitGame",
-          "persistentUuid": "52f52156-733f-4e18-87e5-5f20697d666e",
-          "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "Transparent Button With White Blue Border",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "LeftPadding": 0,
-            "RightPadding": 0,
-            "PressedLabelOffsetY": 4,
-            "BottomPadding": 6,
-            "TopPadding": 0,
-            "HoveredFadeOutDuration": 0,
-            "LabelText": "Quit"
           }
         },
         {
@@ -67818,9 +67782,6 @@
             "objectName": "PlayGame"
           },
           {
-            "objectName": "QuitGame"
-          },
-          {
             "objectName": "Controls"
           },
           {
@@ -67871,30 +67832,6 @@
               "parameters": [
                 "",
                 "\"area0\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
-              },
-              "parameters": [
-                "QuitGame",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Quit"
-              },
-              "parameters": [
                 ""
               ]
             }
